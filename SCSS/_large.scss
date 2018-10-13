@@ -1,0 +1,18 @@
+/* ----------- GRID ----------- */
+
+@for $i from 1 through 16{
+  $w: ($i / 16) * 96%;
+
+  .l-#{$i} {width:$w; }
+}
+/*Header Styles*/
+
+
+
+
+/*Main Styles*/
+
+
+
+
+/*Footer styles*/

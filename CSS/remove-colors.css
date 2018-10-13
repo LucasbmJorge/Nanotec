@@ -1,0 +1,53 @@
+.pink{
+  border: 1px solid #f44242;
+}
+.orange{
+  border: 1px solid #f47741;
+}
+.yellow{
+  border: 1px solid #f4cd41;
+}
+.lime{
+  border: 1px solid #a0f441;
+}
+.green{
+  border: 1px solid #61f441;
+}
+.cyan{
+  border: 1px solid #41f4bb;
+}
+.lblue{
+  border: 1px solid #41c7f4;
+}
+.blu{
+  border: 1px solid #416df4;
+}
+.dblu{
+  border: 1px solid #4143f4;
+}
+.purp{
+border: 1px solid  #7341f4;
+}
+.ponk{
+  border: 1px solid #dc41f4;
+}
+
+.ruler{
+  text-align: center;
+  width:100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index:3;
+}
+
+.rule-s{
+  height:100vh;
+  background-color: lightblue;
+  opacity:0.5;
+  border:1px solid blueviolet;
+}
+
+/* .rule-s{
+  height:100vh;
+} */

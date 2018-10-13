@@ -1,0 +1,190 @@
+html{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+*{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+   box-sizing: border-box; }
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+   content: "";
+   display: table;
+   clear: both;
+  }
+
+
+/* ----------- GRID ----------- */
+@for $i from 1 through 6{
+  $w: ($i / 6) * 96%;
+
+  .s-#{$i} {width:$w;}
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+/*Header Styles*/
+
+header{
+
+  nav{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 1px lightgrey;
+    text-align: left;
+    z-index: 2;
+
+   i{
+     color: $col-2;
+   }
+    h1{
+      padding: 0.8rem;
+      font-weight: 500;
+      font-size: 2rem;
+      color: $col-2;
+    }
+
+    ul{
+      float: right;
+      text-align: center;
+    }
+    a{
+      color: black;
+    }
+
+    li{
+      font-size: 1.2rem;
+      transition: 0.4s ease;
+      padding: 1.22rem 0;
+    }
+    li:hover{
+      background-color: darken( white, 10%);
+    }
+
+    .onthis{
+      color:white;
+      background-color: $col-2;
+
+      i{
+        color:white;
+      }
+    }
+  }//FIM nav;
+
+  .hero{
+    height: 100vh;
+    background-color: black;
+    width: 100%;
+    padding-top: 15vh;
+    overflow: hidden;
+
+    video{
+      width: 100%;
+      position: relative;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+
+    img{
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  } //FIM hero;
+
+
+
+  .bem{
+     font-size: 5rem;
+     font-weight: 500;
+     color: white;
+     position: absolute;
+     width: 80%;
+     top: 12rem;
+     left: 10%;
+     z-index: 0;
+
+
+    span{
+      color: $col-2;
+    }
+  }
+
+  h2{
+    color: white;
+    position: absolute;
+    top: 18.5rem;
+    line-height: 2rem;
+    left: 14%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: left;
+  }
+}//FIM header;
+
+
+
+
+
+/*Main Styles*/
+
+
+ #registro{
+   background-color: $col-3;
+
+   main{
+  margin-top: 2rem;
+
+  h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    color: $col-2;
+  }
+
+  .cadastro{
+    width: 25%;
+    box-shadow: 0px 1px 5px grey;
+    background-color: white;
+    margin: auto;
+    font-weight: 400;
+    padding: 1rem 0;
+    // padding-top: 1rem;
+    border-radius: 0.2rem;
+
+    button{
+      border: none;
+      background-color: $col-2;
+      color:white;
+      padding: 0.5rem 1rem;
+      margin-top: 1.5rem;
+      border-radius: 0.2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }//FIM cadastro;
+  input{
+    width: 90%;
+    margin: 1rem 0;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    // color: $col-2;
+  }
+
+  input::placeholder{
+    // color: darken($col-3, 30%);
+  }
+}
+}//FIM registro;
+
+
+
+
+
+/*Footer styles*/

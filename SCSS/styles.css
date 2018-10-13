@@ -1,0 +1,222 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+.col {
+  margin: auto;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%; }
+  .col img {
+    max-width: 100%; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* ----------- GRID ----------- */
+.s-1 {
+  width: 16%; }
+
+.s-2 {
+  width: 32%; }
+
+.s-3 {
+  width: 48%; }
+
+.s-4 {
+  width: 64%; }
+
+.s-5 {
+  width: 80%; }
+
+.s-6 {
+  width: 96%; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: center; }
+
+/*Header Styles*/
+/*Main Styles*/
+/*Footer styles*/
+@media only screen and (min-width: 560px) {
+  /*For tablet screens*/
+  /* ----------- GRID ----------- */
+  .m-1 {
+    width: 9.6%; }
+
+  .m-2 {
+    width: 19.2%; }
+
+  .m-3 {
+    width: 28.8%; }
+
+  .m-4 {
+    width: 38.4%; }
+
+  .m-5 {
+    width: 48%; }
+
+  .m-6 {
+    width: 57.6%; }
+
+  .m-7 {
+    width: 67.2%; }
+
+  .m-8 {
+    width: 76.8%; }
+
+  .m-9 {
+    width: 86.4%; }
+
+  .m-10 {
+    width: 96%; }
+
+  /*Header Styles*/
+  /*Main Styles*/
+  /*Footer styles*/ }
+@media only screen and (min-width: 1140px) {
+  /*For pc screens*/
+  /* ----------- GRID ----------- */
+  .l-1 {
+    width: 6%; }
+
+  .l-2 {
+    width: 12%; }
+
+  .l-3 {
+    width: 18%; }
+
+  .l-4 {
+    width: 24%; }
+
+  .l-5 {
+    width: 30%; }
+
+  .l-6 {
+    width: 36%; }
+
+  .l-7 {
+    width: 42%; }
+
+  .l-8 {
+    width: 48%; }
+
+  .l-9 {
+    width: 54%; }
+
+  .l-10 {
+    width: 60%; }
+
+  .l-11 {
+    width: 66%; }
+
+  .l-12 {
+    width: 72%; }
+
+  .l-13 {
+    width: 78%; }
+
+  .l-14 {
+    width: 84%; }
+
+  .l-15 {
+    width: 90%; }
+
+  .l-16 {
+    width: 96%; }
+
+  /*Header Styles*/
+  /*Main Styles*/
+  /*Footer styles*/ }
+
+/*# sourceMappingURL=styles.css.map */

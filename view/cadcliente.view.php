@@ -1,3 +1,7 @@
+<?php
+ session_start();
+ ?>
+ 
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -12,19 +16,19 @@
   <body id="registro">
 
     <header>
-      <!-- <nav>
+      <nav>
         <h1 class="col l-4">NANOTEC</h1>
         <ul class="col l-8">
-          <li class="col l-4 onthis"><i class="fas fa-address-card"></i> REGISTRAR</li>
-          <a href=""><li class="col l-4"><i class="fas fa-home"></i> LOGIN</li></a>
-          <a href=""><li class="col l-4"><i class="fas fa-book"></i> SOBRE NÓS</li></a>
+          <li class="col l-4 onthis">REGISTRAR</li>
+          <a href="logescolha.view.php"><li class="col l-4">LOGIN</li></a>
+          <a href="../"><li class="col l-4">SOBRE NÓS</li></a>
         </ul>
-      </nav> -->
+      </nav>
     </header>
 
     <main>
       <form class="cadastro" action="../app/cadastrocliente.app.php" method="post">
-        <h1>NANOTEC</h1>
+        <h1>Cadastro de cliente:</h1>
         <input type="text" name="nomec" value="" placeholder="Nome" required>
         <input type="text" name="cpfcnpj" value="" placeholder="cpf/cnpj (sómente numeros)" required>
         <input type="text" name="empresac" value="" placeholder="Empresa" required>

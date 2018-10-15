@@ -122,11 +122,114 @@ html {
   width: 96%; }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center; }
 
 /*Header Styles*/
+header nav {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 1px lightgrey;
+  text-align: left;
+  z-index: 2; }
+  header nav i {
+    color: #009688; }
+  header nav h1 {
+    padding: 0.8rem;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #009688; }
+  header nav ul {
+    float: right;
+    text-align: center; }
+  header nav a {
+    color: black; }
+  header nav li {
+    font-size: 1.2rem;
+    transition: 0.4s ease;
+    padding: 1.22rem 0; }
+  header nav li:hover {
+    background-color: #e6e6e6; }
+  header nav .onthis {
+    color: white;
+    background-color: #009688; }
+    header nav .onthis i {
+      color: white; }
+header .hero {
+  height: 100vh;
+  background-color: black;
+  width: 100%;
+  padding-top: 15vh;
+  overflow: hidden; }
+  header .hero video {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    opacity: 0.6; }
+  header .hero img {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%; }
+header .bem {
+  font-size: 5rem;
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  width: 80%;
+  top: 12rem;
+  left: 10%;
+  z-index: 0; }
+  header .bem span {
+    color: #009688; }
+header h2 {
+  color: white;
+  position: absolute;
+  top: 18.5rem;
+  line-height: 2rem;
+  left: 14%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: left; }
+
 /*Main Styles*/
+#registro {
+  background-color: #ceeadd; }
+  #registro main {
+    margin-top: 2rem; }
+    #registro main h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin: 1rem 0;
+      color: #009688; }
+    #registro main .cadastro {
+      width: 25%;
+      box-shadow: 0px 1px 5px grey;
+      background-color: white;
+      margin: auto;
+      font-weight: 400;
+      padding: 1rem 0;
+      border-radius: 0.2rem; }
+      #registro main .cadastro button {
+        border: none;
+        background-color: #009688;
+        color: white;
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+        cursor: pointer; }
+    #registro main input {
+      width: 90%;
+      margin: 1rem 0;
+      padding: 0.4rem;
+      font-size: 1.2rem;
+      font-weight: 300; }
+
 /*Footer styles*/
 @media only screen and (min-width: 560px) {
   /*For tablet screens*/

@@ -155,9 +155,14 @@ header nav {
     background-color: #e6e6e6; }
   header nav .onthis {
     color: white;
-    background-color: #009688; }
+    background-color: #009688;
+    cursor: default; }
     header nav .onthis i {
       color: white; }
+  header nav .onthis:hover {
+    color: white;
+    background-color: #009688;
+    cursor: default; }
 header .hero {
   height: 100vh;
   background-color: black;
@@ -202,7 +207,7 @@ header h2 {
   #registro main {
     margin-top: 2rem; }
     #registro main h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 500;
       margin: 1rem 0;
       color: #009688; }
@@ -211,6 +216,7 @@ header h2 {
       box-shadow: 0px 1px 5px grey;
       background-color: white;
       margin: auto;
+      margin-top: 5rem;
       font-weight: 400;
       padding: 1rem 0;
       border-radius: 0.2rem; }
@@ -222,12 +228,42 @@ header h2 {
         margin-top: 1.5rem;
         border-radius: 0.2rem;
         font-size: 1.5rem;
-        cursor: pointer; }
+        cursor: pointer;
+        border: 1px solid white;
+        transition: 0.2s ease; }
+      #registro main .cadastro button:hover {
+        color: #009688;
+        background-color: white;
+        border: 1px solid #009688; }
+    #registro main .equipe {
+      width: 50%;
+      box-shadow: 0px 1px 5px grey;
+      background-color: white;
+      margin: auto;
+      margin-top: 5rem;
+      font-weight: 400;
+      padding: 1rem 0;
+      border-radius: 0.2rem; }
+      #registro main .equipe button {
+        border: none;
+        background-color: #009688;
+        color: white;
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: 1px solid white;
+        transition: 0.2s ease; }
+      #registro main .equipe button:hover {
+        color: #009688;
+        background-color: white;
+        border: 1px solid #009688; }
     #registro main input {
       width: 90%;
-      margin: 1rem 0;
+      margin: 0.5rem 0;
       padding: 0.4rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 300; }
 
 /*Footer styles*/
@@ -320,6 +356,35 @@ header h2 {
 
   /*Header Styles*/
   /*Main Styles*/
+  #green {
+    background-color: #ceeadd; }
+
+  .escolha {
+    background-color: white;
+    margin-top: 8rem;
+    padding: 1rem 0;
+    padding-bottom: 2rem; }
+    .escolha h2 {
+      font-size: 2.2rem;
+      color: #444;
+      font-weight: 300;
+      margin-bottom: 2rem; }
+    .escolha a {
+      border: 1px solid grey;
+      padding: 0.5rem;
+      font-size: 1.6rem;
+      color: grey;
+      background-color: inherit;
+      text-decoration: none;
+      margin: 4rem 2rem;
+      margin-bottom: 8rem;
+      transition: 0.5s ease;
+      border-radius: 0.2rem; }
+    .escolha a:hover {
+      color: white;
+      background-color: #009688;
+      border: 1px solid white; }
+
   /*Footer styles*/ }
 
 /*# sourceMappingURL=styles.css.map */

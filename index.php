@@ -14,7 +14,6 @@
     <header>
 
       <div class="hero">
-        <!-- <img src="images/8478.jpg" alt=""> -->
         <video loop autoplay>
          <source src="images/Internet.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -22,10 +21,10 @@
       </div>
 
       <nav>
-      <a href="#"><h1 class="col l-4">NANOTEC <i class="fas fa-microchip"></i></h1></a>
+      <a href="#"><h1 class="col l-4">NANOTEC</h1></a>
         <ul class="col l-8">
-          <a href="view/cadastro.view.php"><li class="col l-4"></i> REGISTRAR</li></a>
-          <a href="view/login.view.php"><li class="col l-4"></i> LOGIN</li></a>
+          <a href="view/cadescolha.view.php"><li class="col l-4"></i> REGISTRAR</li></a>
+          <a href="view/logescolha.view.php"><li class="col l-4"></i> LOGIN</li></a>
           <a href=""><li class="col l-4"></i> SOBRE NÓS</li></a>
         </ul>
       </nav>

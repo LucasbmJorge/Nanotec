@@ -21,7 +21,6 @@ body{
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
-
 /*Header Styles*/
 
 header{
@@ -66,10 +65,17 @@ header{
     .onthis{
       color:white;
       background-color: $col-2;
+      cursor: default;
 
       i{
         color:white;
       }
+    }
+
+    .onthis:hover{
+      color:white;
+      background-color: $col-2;
+      cursor: default;
     }
   }//FIM nav;
 
@@ -141,7 +147,7 @@ header{
   margin-top: 2rem;
 
   h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 500;
     margin: 1rem 0;
     color: $col-2;
@@ -152,9 +158,9 @@ header{
     box-shadow: 0px 1px 5px grey;
     background-color: white;
     margin: auto;
+    margin-top: 5rem;
     font-weight: 400;
     padding: 1rem 0;
-    // padding-top: 1rem;
     border-radius: 0.2rem;
 
     button{
@@ -166,13 +172,51 @@ header{
       border-radius: 0.2rem;
       font-size: 1.5rem;
       cursor: pointer;
+      border: 1px solid white;
+      transition: 0.2s ease;
+    }
+    button:hover{
+      color: $col-2;
+      background-color: white;
+      border: 1px solid $col-2;
     }
   }//FIM cadastro;
+
+  .equipe{
+    width: 50%;
+      box-shadow: 0px 1px 5px grey;
+      background-color: white;
+      margin: auto;
+      margin-top: 5rem;
+      font-weight: 400;
+      padding: 1rem 0;
+      border-radius: 0.2rem;
+
+
+
+      button{
+        border: none;
+        background-color: $col-2;
+        color:white;
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: 1px solid white;
+        transition: 0.2s ease;
+      }
+      button:hover{
+        color: $col-2;
+        background-color: white;
+        border: 1px solid $col-2;
+      }
+  }
   input{
     width: 90%;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     padding: 0.4rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
     // color: $col-2;
   }

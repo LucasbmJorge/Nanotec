@@ -4,9 +4,10 @@
 
  session_start();
  $id = $_SESSION['id'];
- 
+
  include '../includes/head.php';
  ?>
+
 
   <body>
     <main>

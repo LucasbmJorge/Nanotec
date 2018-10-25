@@ -134,7 +134,8 @@ header nav {
   left: 0;
   box-shadow: 0px 0px 1px lightgrey;
   text-align: left;
-  z-index: 2; }
+  z-index: 2;
+  font-weight: 500; }
   header nav i {
     color: #009688; }
   header nav h1 {
@@ -236,7 +237,7 @@ header h2 {
         background-color: white;
         border: 1px solid #009688; }
     #registro main .equipe {
-      width: 50%;
+      width: 60%;
       box-shadow: 0px 1px 5px grey;
       background-color: white;
       margin: auto;
@@ -265,6 +266,66 @@ header h2 {
       padding: 0.4rem;
       font-size: 1.1rem;
       font-weight: 300; }
+    #registro main .check {
+      width: 10%; }
+
+#painel {
+  background-color: #ceeadd; }
+  #painel .controle {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+    padding: 1rem 0;
+    padding-bottom: 2rem;
+    border-radius: 0.2rem; }
+    #painel .controle h2 {
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: #222;
+      margin: 1rem 0;
+      margin-bottom: 2rem; }
+      #painel .controle h2 span {
+        color: #009688;
+        font-weight: 500; }
+    #painel .controle a, #painel .controle button {
+      border: 1px solid lightgrey;
+      background-color: white;
+      padding: 0.5rem 0.4rem;
+      width: auto;
+      margin: 0.5rem;
+      color: #009688;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: 0.5s ease;
+      cursor: pointer; }
+    #painel .controle a:hover, #painel .controle button:hover {
+      background-color: #009688;
+      color: white; }
+
+.visor div {
+  text-align: left;
+  margin: 0 0.5rem; }
+  .visor div h3 {
+    text-align: center; }
+  .visor div p {
+    font-size: 1.2rem; }
+
+.especial {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #afafaf;
+  text-align: left; }
+  .especial input {
+    cursor: pointer;
+    height: 1.5rem; }
+  .especial h3 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem; }
+  .especial p {
+    display: inline;
+    text-align: center; }
 
 /*Footer styles*/
 @media only screen and (min-width: 560px) {
@@ -376,8 +437,7 @@ header h2 {
       color: grey;
       background-color: inherit;
       text-decoration: none;
-      margin: 4rem 2rem;
-      margin-bottom: 8rem;
+      width: auto;
       transition: 0.5s ease;
       border-radius: 0.2rem; }
     .escolha a:hover {

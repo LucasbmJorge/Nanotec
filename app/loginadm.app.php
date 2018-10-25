@@ -15,6 +15,7 @@
   $_SESSION['id'] = $row['id_adm'];
   $_SESSION['nome'] = $row['nome_adm'];
   $_SESSION['email'] = $row['email_adm'];
+  $_SESSION['administrador'] = true;
 
   header("Location:../view/painelAdm.view.php");
 

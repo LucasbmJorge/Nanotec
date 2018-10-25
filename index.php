@@ -1,3 +1,9 @@
+<?php
+ session_start();
+ $nome = $_SESSION['nome'];
+ $adm = $_SESSION['administrador'];
+
+ ?>
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -21,8 +27,18 @@
       </div>
 
       <nav>
-      <a href="#"><h1 class="col l-4">NANOTEC</h1></a>
+      <a href="/"><h1 class="col l-4">NANOTEC</h1></a>
         <ul class="col l-8">
+          <?php if( isset($_SESSION['id'])){
+            if($adm) {
+              echo "<a href='view/painelAdm.view.php'><li class='col l-4'></i>PAINEL</li></a>";
+            }
+            else{
+            echo "<a href='view/painelcliente.view.php'><li class='col l-4'></i>PAINEL</li></a>";
+          }
+        }?>
+
+
           <a href="view/cadescolha.view.php"><li class="col l-4"></i> REGISTRAR</li></a>
           <a href="view/logescolha.view.php"><li class="col l-4"></i> LOGIN</li></a>
           <a href=""><li class="col l-4"></i> SOBRE NÓS</li></a>

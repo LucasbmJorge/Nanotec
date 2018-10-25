@@ -1,17 +1,8 @@
 <?php
  session_start();
- ?>
 
- <!DOCTYPE html>
-<html lang="pt">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <link rel="stylesheet" href="../CSS/fontawesome-all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="stylesheet" href="../CSS/remove-colors.css">
-  </head>
+ include '../includes/head.php';
+ ?>
 
   <body id="registro">
 
@@ -28,7 +19,7 @@
     </header>
 
     <main>
-      <form class="cadastro" action="../app/logincliente.app.php" method="post">
+      <form class="cadastro" action="../app/loginequipe.app.php" method="post">
         <h1>Login equipe:</h1>
         <input type="text" name="cpf" value="" placeholder="cpf/cnpj (sómente numeros)" required>
         <input type="text" name="senha" value="" placeholder="Senha" required>

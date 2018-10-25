@@ -1,27 +1,25 @@
 <?php
  session_start();
+ if(!isset($_SESSION['id'])){
+   header("Location:../");
+ }
  $nome = $_SESSION['nome'];
  $id = $_SESSION['id'];
  $email = $_SESSION['email'];
+
+ include '../includes/head.php';
  ?>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <link rel="stylesheet" href="../CSS/fontawesome-all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="stylesheet" href="../CSS/remove-colors.css">
-  </head>
+  <body id="painel">
 
-  <body>
-    <h1>Bem vindo: <?php echo"$nome"; ?> </h1>
+    <div class="col controle">
 
-    <a href="#"> <button type="button" name="button">Fazer pedido</button></a>
-      <a href="#"> <button type="button" name="button">Acompanhamento de pedidos</button></a>
-        <a href="altcliente.view.php"> <button type="button" name="button">Configurações de conta</button></a>
-          <a href="../app/logout.app.php"> <button type="button" name="button">Log Out</button></a>
+      <h2>Bem vindo a <span>NANOTEC</span>: <?php echo"$nome"; ?> </h2>
+
+    <a class="col" href="#">Fazer pedido</a>
+    <a class="col" href="#">Acompanhamento de pedidos</a>
+    <a class="col" href="altcliente.view.php">Configurações de conta</a>
+    <a class="col" href="../app/logout.app.php">Log Out</a>
+    </div>
   </body>
 </html>

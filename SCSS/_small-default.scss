@@ -34,6 +34,7 @@ header{
     box-shadow: 0px 0px 1px lightgrey;
     text-align: left;
     z-index: 2;
+    font-weight: 500;
 
    i{
      color: $col-2;
@@ -183,7 +184,7 @@ header{
   }//FIM cadastro;
 
   .equipe{
-    width: 50%;
+    width: 60%;
       box-shadow: 0px 1px 5px grey;
       background-color: white;
       margin: auto;
@@ -191,8 +192,6 @@ header{
       font-weight: 400;
       padding: 1rem 0;
       border-radius: 0.2rem;
-
-
 
       button{
         border: none;
@@ -211,22 +210,103 @@ header{
         background-color: white;
         border: 1px solid $col-2;
       }
-  }
+  }//Fim equipe;
+
   input{
     width: 90%;
     margin: 0.5rem 0;
     padding: 0.4rem;
     font-size: 1.1rem;
     font-weight: 300;
-    // color: $col-2;
+  }
+  .check{
+    width:10%;
   }
 
-  input::placeholder{
-    // color: darken($col-3, 30%);
-  }
-}
+}//fim registro main;
+
 }//FIM registro;
 
+#painel{
+  background-color: $col-3;
+
+  .controle{
+    background-color: white;
+    width: 80%;
+    margin:auto;
+    margin-top:4rem;
+    padding: 1rem 0;
+    padding-bottom: 2rem;
+    border-radius: 0.2rem;
+
+    h2{
+      font-weight:400;
+      font-size: 1.6rem;
+      color: #222;
+      margin: 1rem 0;
+      margin-bottom: 2rem;
+
+      span{
+        color: $col-2;
+        font-weight: 500;
+      }
+    }
+    a, button{
+        border: 1px solid lightgrey;
+        background-color: white;
+        padding: 0.5rem 0.4rem;
+        width: auto;
+        margin: 0.5rem;
+        color: $col-2;
+        text-decoration: none;
+        font-size: 1.3rem;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    a:hover, button:hover{
+      background-color: $col-2;
+      color:white;
+    }
+  }//FIM controle;
+}//FIM painel;
+
+.visor{
+
+  div{
+    text-align: left;
+    margin: 0 0.5rem;
+
+    h3{
+      text-align: center;
+    }
+
+    p{
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.especial{
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #afafaf;
+  text-align: left;
+
+  input{
+    cursor:pointer;
+    height: 1.5rem;
+  }
+
+  h3{
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  p{
+    display: inline;
+    text-align: center;
+  }
+}
 
 
 

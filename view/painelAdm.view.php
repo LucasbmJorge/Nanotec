@@ -1,22 +1,28 @@
 <?php
  session_start();
+ $nome = $_SESSION['nome'];
+ $adm = $_SESSION['administrador'];
 
+
+ if(!$adm){
+   session_destroy();
+   header("Location: ../");
+ } else{
+  include '../includes/head.php';
+}
  ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <link rel="stylesheet" href="../CSS/fontawesome-all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="stylesheet" href="../CSS/remove-colors.css">
-  </head>
-  <body>
-    <a href="#"> <button type="button" name="button">Registrar empresas</button></a>
-    <a href="#"> <button type="button" name="button">Registrar funcionario</button></a>
-    <a href="altcliente.view.php"> <button type="button" name="button">Configurações de conta</button></a>
-    <a href="altcliente.view.php"> <button type="button" name="button">Configurações de equipes</button></a>
-    <a href="altcliente.view.php"> <button type="button" name="button">Configurações de clientes</button></a>
+
+
+  <body id="painel">
+
+    <div class="col controle">
+      <h2>Bem vindo a <span>NANOTEC</span>: <?php echo"$nome"; ?> </h2>
+    <a href="admin/registroequipe.view.php" class="col l-6 m-3 ">Registrar empresas</a>
+    <a href="#" class="col l-6 m-3 ">Registrar funcionario</a>
+    <a href="altadm.view.php" class="col l-6 m-3 ">Configurações da conta</a> <br>
+    <a href="altcliente.view.php" class="col l-6 m-3 ">Configurações de equipes</a>
+    <a href="altcliente.view.php" class="col l-6 m-3 ">Configurações de clientes</a>
+    <a href="../app/logout.app.php" class="col l-6 m-3 ">Sair</a>
+    </div>
   </body>
 </html>

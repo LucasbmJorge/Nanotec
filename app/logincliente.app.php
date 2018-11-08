@@ -1,6 +1,6 @@
 <?php
  session_start();
- include "../conecta.php";
+ include "../includes/conecta.php";
 
   $cpf = $_POST['cpf'];
   $senha = $_POST['senha'];
@@ -15,6 +15,7 @@
   $_SESSION['id'] = $row['id_cliente'];
   $_SESSION['nome'] = $row['nome_cliente'];
   $_SESSION['email'] = $row['email_cliente'];
+  $_SESSION['tipologin'] = 'cliente';
 
   header("Location:../view/painelcliente.view.php");
 

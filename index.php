@@ -1,7 +1,10 @@
 <?php
  session_start();
+
+ if(isset($_SESSION['id'])){
  $nome = $_SESSION['nome'];
  $adm = $_SESSION['administrador'];
+}
 
  ?>
 <!DOCTYPE html>
@@ -27,25 +30,30 @@
       </div>
 
       <nav>
-      <a href="/"><h1 class="col l-4">NANOTEC</h1></a>
-        <ul class="col l-8">
+      <a href="#" class="col nanotec">NANOTEC</a>
+        <ul>
           <?php if( isset($_SESSION['id'])){
             if($adm) {
-              echo "<a href='view/painelAdm.view.php'><li class='col l-4'></i>PAINEL</li></a>";
+            echo "<a href='view/Admin/painelAdm.view.php'><li>PAINEL</li></a>";
             }
             else{
-            echo "<a href='view/painelcliente.view.php'><li class='col l-4'></i>PAINEL</li></a>";
-          }
+              if ($_SESSION['tipologin'] == 'cliente') {
+              echo "<a href='view/Cliente/painelcliente.view.php'><li>PAINEL</li></a>";
+              }
+              if ($_SESSION['tipologin'] == 'equipe') {
+              echo "<a href='view/Equipe/painelequipe.view.php'><li>PAINEL</li></a>";
+              }
+            }else{
+          echo "
+          <a href='view/cadescolha.view.php'><li>REGISTRAR</li></a>
+          <a href='view/logescolha.view.php'><li>LOGIN</li></a>
+          ";
         }?>
-
-
-          <a href="view/cadescolha.view.php"><li class="col l-4"></i> REGISTRAR</li></a>
-          <a href="view/logescolha.view.php"><li class="col l-4"></i> LOGIN</li></a>
-          <a href=""><li class="col l-4"></i> SOBRE NÓS</li></a>
+        <a href=""><li>SOBRE NÓS</li></a>
         </ul>
       </nav>
 
-    <h1 class="col bem">BEM VINDO A <span class="gree">NANOTEC</span></h1>
+    <h1 class="col bem">BEM VINDO A <span>NANOTEC</span></h1>
     <h2 class="col l-12">Somos uma empresa focada em unir demanda e oferta de projetos
                           para garantir que empresas talentosas possam entregar projetos de qualidade
                           a clientes que querem algo pronto rápido.</h2>

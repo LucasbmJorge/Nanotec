@@ -79,12 +79,12 @@ hr {
 input, select {
   vertical-align: middle; }
 
-.col {
+.col, .nanotec, nav, ul, ul a {
   margin: auto;
   vertical-align: top;
   display: inline-block;
   width: 100%; }
-  .col img {
+  .col img, .nanotec img, nav img, ul img, ul a img {
     max-width: 100%; }
 
 html {
@@ -138,16 +138,23 @@ header nav {
   font-weight: 500; }
   header nav i {
     color: #009688; }
-  header nav h1 {
+  header nav .nanotec {
+    width: 54%;
     padding: 0.8rem;
     font-weight: 500;
     font-size: 2rem;
-    color: #009688; }
+    color: #009688;
+    text-decoration: none;
+    text-align: left; }
   header nav ul {
-    float: right;
-    text-align: center; }
+    width: 44%;
+    text-align: center;
+    text-align: right; }
   header nav a {
-    color: black; }
+    color: #00877a;
+    width: 29%;
+    text-decoration: none;
+    text-align: center; }
   header nav li {
     font-size: 1.2rem;
     transition: 0.4s ease;
@@ -187,7 +194,7 @@ header .bem {
   color: white;
   position: absolute;
   width: 80%;
-  top: 12rem;
+  top: 14rem;
   left: 10%;
   z-index: 0; }
   header .bem span {
@@ -195,33 +202,33 @@ header .bem {
 header h2 {
   color: white;
   position: absolute;
-  top: 18.5rem;
-  line-height: 2rem;
+  top: 20.5rem;
+  line-height: 2.2rem;
   left: 14%;
   font-size: 1.6rem;
   font-weight: 400;
   text-align: left; }
 
 /*Main Styles*/
-#registro {
+#registro, #green {
   background-color: #ceeadd; }
-  #registro main {
+  #registro main, #green main {
     margin-top: 2rem; }
-    #registro main h1 {
+    #registro main h1, #registro main h2, #green main h1, #green main h2 {
       font-size: 2rem;
       font-weight: 500;
       margin: 1rem 0;
       color: #009688; }
-    #registro main .cadastro {
+    #registro main .cadastro, #registro main .escolha, #green main .cadastro, #green main .escolha {
       width: 25%;
       box-shadow: 0px 1px 5px grey;
       background-color: white;
       margin: auto;
-      margin-top: 5rem;
+      margin-top: 8rem;
       font-weight: 400;
       padding: 1rem 0;
       border-radius: 0.2rem; }
-      #registro main .cadastro button {
+      #registro main .cadastro button, #registro main .escolha button, #green main .cadastro button, #green main .escolha button {
         border: none;
         background-color: #009688;
         color: white;
@@ -232,11 +239,27 @@ header h2 {
         cursor: pointer;
         border: 1px solid white;
         transition: 0.2s ease; }
-      #registro main .cadastro button:hover {
+      #registro main .cadastro button:hover, #registro main .escolha button:hover, #green main .cadastro button:hover, #green main .escolha button:hover {
         color: #009688;
         background-color: white;
         border: 1px solid #009688; }
-    #registro main .equipe {
+      #registro main .cadastro a, #registro main .escolha a, #green main .cadastro a, #green main .escolha a {
+        border: 1px solid grey;
+        margin: auto;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.6rem;
+        color: grey;
+        width: 60%;
+        transition: 0.5s ease;
+        border-radius: .2rem; }
+      #registro main .cadastro a:hover, #registro main .escolha a:hover, #green main .cadastro a:hover, #green main .escolha a:hover {
+        color: white;
+        background-color: #009688;
+        border: 1px solid #009688; }
+    #registro main .equipe, #green main .equipe {
       width: 60%;
       box-shadow: 0px 1px 5px grey;
       background-color: white;
@@ -245,7 +268,7 @@ header h2 {
       font-weight: 400;
       padding: 1rem 0;
       border-radius: 0.2rem; }
-      #registro main .equipe button {
+      #registro main .equipe button, #green main .equipe button {
         border: none;
         background-color: #009688;
         color: white;
@@ -256,18 +279,39 @@ header h2 {
         cursor: pointer;
         border: 1px solid white;
         transition: 0.2s ease; }
-      #registro main .equipe button:hover {
+      #registro main .equipe button:hover, #green main .equipe button:hover {
         color: #009688;
         background-color: white;
         border: 1px solid #009688; }
-    #registro main input {
+    #registro main input, #registro main select, #registro main textarea, #green main input, #green main select, #green main textarea {
       width: 90%;
       margin: 0.5rem 0;
       padding: 0.4rem;
       font-size: 1.1rem;
-      font-weight: 300; }
-    #registro main .check {
+      font-weight: 300;
+      color: #009688; }
+    #registro main textarea, #green main textarea {
+      width: 90%;
+      height: 10rem;
+      resize: none; }
+    #registro main .check, #green main .check {
       width: 10%; }
+  #registro .pedidos, #green .pedidos {
+    background-color: white;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 6rem;
+    padding: .5rem 0;
+    box-shadow: 0px 1px 5px #87cbab; }
+    #registro .pedidos .pedido, #green .pedidos .pedido {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border-top: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+      margin-top: -1px; }
+      #registro .pedidos .pedido p, #green .pedidos .pedido p {
+        margin: 0.5rem 0; }
 
 #painel {
   background-color: #ceeadd; }
@@ -275,7 +319,7 @@ header h2 {
     background-color: white;
     width: 80%;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 8rem;
     padding: 1rem 0;
     padding-bottom: 2rem;
     border-radius: 0.2rem; }
@@ -302,6 +346,21 @@ header h2 {
     #painel .controle a:hover, #painel .controle button:hover {
       background-color: #009688;
       color: white; }
+    #painel .controle .pedido {
+      width: 100%;
+      border-bottom: 1px solid lightgrey;
+      padding: 1.5rem; }
+      #painel .controle .pedido p {
+        display: inline-block;
+        line-height: 1.2rem;
+        margin: .5rem .3rem;
+        width: 30%;
+        vertical-align: top; }
+        #painel .controle .pedido p b {
+          color: #007d71;
+          margin: 1.5rem 0; }
+      #painel .controle .pedido button {
+        margin: auto; }
 
 .visor div {
   text-align: left;
@@ -419,31 +478,6 @@ header h2 {
   /*Main Styles*/
   #green {
     background-color: #ceeadd; }
-
-  .escolha {
-    background-color: white;
-    margin-top: 8rem;
-    padding: 1rem 0;
-    padding-bottom: 2rem; }
-    .escolha h2 {
-      font-size: 2.2rem;
-      color: #444;
-      font-weight: 300;
-      margin-bottom: 2rem; }
-    .escolha a {
-      border: 1px solid grey;
-      padding: 0.5rem;
-      font-size: 1.6rem;
-      color: grey;
-      background-color: inherit;
-      text-decoration: none;
-      width: auto;
-      transition: 0.5s ease;
-      border-radius: 0.2rem; }
-    .escolha a:hover {
-      color: white;
-      background-color: #009688;
-      border: 1px solid white; }
 
   /*Footer styles*/ }
 

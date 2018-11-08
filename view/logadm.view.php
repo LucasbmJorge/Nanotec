@@ -2,18 +2,18 @@
  session_start();
 
  include '../includes/head.php';
+
  ?>
 
-  <body id="registro">
+  <body id="green">
 
     <header>
       <nav>
-        <h1 class="col l-4">NANOTEC</h1>
-
-        <ul class="col l-8">
-          <a href="cadescolha.view.php"><li class="col l-4">REGISTRAR</li></a>
-          <a href="#"><li class="col l-4 onthis">LOGIN</li></a>
-          <a href="../"><li class="col l-4">SOBRE NÓS</li></a>
+      <a href="#" class="col nanotec">NANOTEC</a>
+        <ul>
+          <a href='cadescolha.view.php'><li>REGISTRAR</li></a>
+          <a class="onthis"><li>LOGIN</li></a>
+          <a href=""><li>SOBRE NÓS</li></a>
         </ul>
       </nav>
     </header>

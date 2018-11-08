@@ -15,6 +15,16 @@
 
   <body id="painel">
 
+    <header>
+      <nav>
+      <a href="#" class="col nanotec">NANOTEC</a>
+        <ul>
+          <a class="onthis"><li>PAINEL</li></a>
+          <a href="../"><li>SOBRE NÓS</li></a>
+        </ul>
+      </nav>
+    </header>
+
     <div class="col controle">
       <h2>Bem vindo a <span>NANOTEC</span>: <?php echo"$nome"; ?> </h2>
     <a href="admin/registroequipe.view.php" class="col l-6 m-3 ">Registrar empresas</a>

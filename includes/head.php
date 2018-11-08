@@ -1,3 +1,22 @@
+<?php
+  include "../includes/conecta.php";
+
+  session_start();
+
+  if (isset($_SESSION['id'])) {
+    if(isset($_SESSION['administrador'])){
+      header("Location: paineladm.view.php");
+    }
+    else{
+      if ($_SESSION['tipologin'] == 'cliente') {
+       header("Location: painelcliente.view.php");
+      }
+      if ($_SESSION['tipologin'] == 'equipe') {
+        header("Location: painelequipe.view.php");
+      }
+    }
+  }
+ ?>
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>

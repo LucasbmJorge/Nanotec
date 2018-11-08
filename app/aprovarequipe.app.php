@@ -1,6 +1,6 @@
 <?php
  session_start();
- include '../conecta.php';
+ include '../includes/conecta.php';
 
  $essa = $_SESSION['essaequipe'];
 
@@ -11,20 +11,20 @@
  if($row = $polvora->fetch_assoc()){
      $nomee = $row['nome_da_equipe'];
      $cnpje = $row['cnpj_equipe'];
-     $integrantes = $row['numero_integrantes'];
+     $integrantese = $row['numero_integrantes'];
      $enderecoe = $row['endereco_equipe'];
      $telefonee = $row['telefone_equipe'];
      $emaile = $row['email_equipe'];
-     $senha = $row['senha_equipe'];
+     $senhae = $row['senha_equipe'];
      $uide = $row['chave_equipe'];
  }
 
- echo"'$nomee', '$cnpje', '$integrantes', '$enderecoe', '$telefonee', '$emaile', '$uide'<br>";
+ echo " '$nomee', '$cnpje', '$integrantes', '$enderecoe', '$telefonee', '$emaile','$senha', '$uide'<br>";
 
- $sql = "INSERT INTO `nanotec`.`equipe` (`nome_da_equipe`, `cnpj_equipe`, `numero_integrantes`, `endereco_equipe`, `telefone_equipe`, `email_equipe`, `senha_equipe`, 'chave_equipe')
-         VALUES ('$nomee', '$cnpje', '$integrantes', '$enderecoe', '$telefonee', '$emaile', '$senha' '$uide')";
+  $sql="INSERT INTO `nanotec`.`equipe` (`nome_da_equipe`, `cnpj_equipe`, `numero_integrantes`, `endereco_equipe`, `telefone_equipe`, `email_equipe`, `senha_equipe`, `chave_equipe`)
+  VALUES ('$nomee', '$cnpje', '$integrantese', '$enderecoe', '$telefonee', '$emaile', '$senhae', '$uide');";
 
- $dinamite = $conn -> query($sql);
+  $result = $conn->query($sql);
 
 
   $sql = "SELECT * FROM `servicotemp` WHERE chave_equipe = '$essa';";

@@ -4,15 +4,15 @@
  include '../includes/head.php';
  ?>
 
-  <body id="registro">
+  <body id="green">
 
     <header>
       <nav>
-        <h1 class="col l-4">NANOTEC</h1>
-        <ul class="col l-8">
-          <li class="col l-4 onthis">REGISTRAR</li>
-          <a href="logescolha.view.php"><li class="col l-4">LOGIN</li></a>
-          <a href="../"><li class="col l-4">SOBRE NÓS</li></a>
+      <a href="#" class="col nanotec">NANOTEC</a>
+        <ul>
+          <a class="onthis"><li>REGISTRAR</li></a>
+          <a href='logescolha.view.php'><li>LOGIN</li></a>
+          <a href=""><li>SOBRE NÓS</li></a>
         </ul>
       </nav>
     </header>

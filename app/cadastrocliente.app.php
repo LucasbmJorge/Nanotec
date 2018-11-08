@@ -1,4 +1,4 @@
-<?php include "../conecta.php";
+<?php include "../includes/conecta.php";
 
 
  $nome = $_POST['nomec'];

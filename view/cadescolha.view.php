@@ -2,19 +2,20 @@
  session_start();
 
  include '../includes/head.php';
+
  ?>
 
   <body id="green">
 
     <header>
       <nav>
-        <a href="#"><h1 class="col l-4">NANOTEC</h1></a>
-        <ul class="col l-8">
-        <a href="#"><li class="col l-4 onthis"></i> REGISTRAR</li></a>
-        <a href="logescolha.view.php"><li class="col l-4"></i> LOGIN</li></a>
-        <a href="../"><li class="col l-4"></i> SOBRE NÓS</li></a>
-      </ul>
-    </nav>
+      <a href="#" class="col nanotec">NANOTEC</a>
+        <ul>
+          <a class="onthis"><li>REGISTRAR</li></a>
+          <a href='logescolha.view.php'><li>LOGIN</li></a>
+          <a href="../"><li>SOBRE NÓS</li></a>
+        </ul>
+      </nav>
     </header>
 
     <main>

@@ -8,43 +8,41 @@
 /*Header Styles*/
 
 
-
-
 /*Main Styles*/
  #green{
-   background-color: $col-3;
+   background-color: $cor-3;
  }
 
- .escolha{
-  background-color: white;
-  margin-top: 8rem;
-  padding: 1rem 0;
-  padding-bottom: 2rem;
-
-  h2{
-    font-size:2.2rem;
-    color: #444;
-    font-weight: 300;
-    margin-bottom:2rem;
-  }
-
-  a{
-    border: 1px solid grey;
-    padding: 0.5rem;
-    font-size: 1.6rem;
-    color: grey;
-    background-color: inherit;
-    text-decoration: none;
-    width: auto;
-    transition: 0.5s ease;
-    border-radius: 0.2rem;
-  }
-  a:hover{
-    color: white;
-    background-color: $col-2;
-    border: 1px solid white;
-  }
-}//FIM escolha;
+//  .escolha{
+//   background-color: white;
+//   margin-top: 8rem;
+//   padding: 1rem 0;
+//   padding-bottom: 2rem;
+//
+//   h2{
+//     font-size:2.2rem;
+//     color: #444;
+//     font-weight: 300;
+//     margin-bottom:2rem;
+//   }
+//
+//   a{
+//     border: 1px solid grey;
+//     padding: 0.5rem;
+//     font-size: 1.6rem;
+//     color: grey;
+//     background-color: inherit;
+//     text-decoration: none;
+//     width: 50%;
+//     transition: 0.5s ease;
+//     border-radius: 0.2rem;
+//   }
+//   a:hover{
+//     color: white;
+//     background-color: $cor-2;
+//     border: 1px solid white;
+//   }
+// }//FIM escolha;
 
 
 

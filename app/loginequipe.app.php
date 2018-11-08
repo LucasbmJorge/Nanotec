@@ -1,26 +1,52 @@
 <?php
  session_start();
- include "../conecta.php";
+ include "../includes/conecta.php";
 
-  $cnpj = $_POST['cpf'];
+  $login = $_POST['login'];
   $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM `equipe` WHERE cnpj_equipe='$cnpj' && senha='$senha'";
+  if (!ctype_digit($login)) {
+    echo "$login, $senha";
+   $sql = "SELECT * FROM `equipe` WHERE nome_da_equipe = '$login' && senha_equipe = '$senha';";
+   $result = $conn -> query($sql);
 
-  $result=mysqli_query($conn, $sql);
+   if($row = $result->fetch_assoc()){
 
-  if($row = $result->fetch_assoc()){
+    $_SESSION['id'] = $row['chave_equipe'];
+    $_SESSION['id_numero'] = $row['id_equipe'];
+    $_SESSION['nome'] = $row['nome_da_equipe'];
+    $_SESSION['email'] = $row['email_equipe'];
+    $_SESSION['tipologin'] = 'equipe';
 
-  $nome = $row['nome_cliente'];
-  $_SESSION['id'] = $row['id_cliente'];
-  $_SESSION['nome'] = $row['nome_cliente'];
-  $_SESSION['email'] = $row['email_cliente'];
-
-  header("Location:../view/painelcliente.view.php");
-
+    header("Location:../view/painelequipe.view.php");
   }
   else{
-    echo "CPF ou Senha incorretos!";
-};
+    echo "Login ou Senha incorretos!";
+}
+}//FIM ctype;
+
+
+  else {
+    echo "$login, $senha";
+  $sql = "SELECT * FROM `nanotec` . `equipe` WHERE cpf_cnpj='$cpf' && senha_equipe ='$senha'";
+  $result = $conn -> query($sql);
+
+   if($row = $result->fetch_assoc()){
+
+    $_SESSION['id'] = $row['chave_equipe'];
+    $_SESSION['id_numero'] = $row['id_equipe'];
+    $_SESSION['nome'] = $row['nome_da_equipe'];
+    $_SESSION['email'] = $row['email_equipe'];
+    $_SESSION['tipologin'] = 'equipe';
+
+    header("Location:../view/painelequipe.view.php");
+ }
+ else{
+   echo "CPF ou Senha incorretos!";
+}
+}//FIM else;
+
+
+
 
  ?>

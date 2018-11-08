@@ -12,10 +12,10 @@
   include '../../conecta.php';
 
 
-  $queequipe = $_POST['queequipe'];
+ $essa = $_SESSION['essaequipe'];
 
   // Puxa as informaçoes da tabela equipetemp:---------------------
-  $sql="SELECT * FROM `equipetemp` WHERE id_equipe = '$queequipe';";
+  $sql="SELECT * FROM `equipetemp` WHERE chave_equipe = '$essa';";
 
   $result = $conn -> query($sql);
 
@@ -51,35 +51,5 @@
 
 
  <body id="painel">
-   <div class="col controle visor">
-     <h2>Detalhes da equipe:</h2>
-     <div class="col l-8 ">
 
-     <?php
-     echo "<p><b>Nome da equipe:</b> $nomee</p>
-     <p><b>cnpj da equipe:</b> $cnpje</p>
-     <p><b>numero de integrantes:</b> $integrantes</p>
-     <p><b>Endereço da equipe:</b> $enderecoe</p>
-     <p><b>Telefone:</b> $telefonee</p>
-     <p><b>Email:</b> $emaile</p>";
-      ?>
-     </div>
-
-     <div class="col l-7">
-       <h3>Especializações:</h3>
-       <ul>
-         <?php
-         if($banco){ echo"<li>Banco de dados</li>";}
-         if($redes){ echo"<li>Criação de redes</li>";}
-         if($analise){ echo"<li>Análise de sistemas</li>";}
-         if($desenvolvimento){ echo"<li>Desenvolvimento de sistemas</li>";}
-         if($montagem){ echo"<li>Montagem e manutenção de computadores</li>";}
-         if($sites){ echo"<li>Criação de sites</li>";}
-          ?>
-       </ul>
-     </div>
-
-     <a href="../../app/aprovarequipe.app.php">Aprovar</a>
-     <a href="recusarequipe.view.php">Recusar</a>
-   </div>
  </body>

@@ -1,55 +1,49 @@
 <?php
-
- include "../conecta.php";
-
  session_start();
+ $nome = $_SESSION['nome'];
+ $adm = $_SESSION['administrador'];
  $id = $_SESSION['id'];
+ echo "$id";
 
- include '../includes/head.php';
+ if(!$adm){
+   session_destroy();
+   header("Location: ../");
+ } else{
+   include "../../includes/head.php";
+   include "../../includes/conecta.php";
+}
  ?>
 
 
-  <body>
-    <main>
-    <?php
+  <body id="painel">
+    <header>
+     <nav>
+       <?php include "admnav.php"; ?>
+     </nav>
+    </header>
+      <form class="controle" action="../../app/altadm.app.php" method="post">
 
-      $sql = "SELECT * FROM `cliente` WHERE id_cliente = $id;";
+        <?php
+        $sql= "SELECT * FROM `nanotec` . `funcionario` WHERE id_adm ='$id'";
+        $result = $conn -> query($sql);
 
-      $result = $conn -> query($sql);
-
-
-      while( $row = $result->fetch_assoc()){
-        $nome = $row['nome_cliente'];
-        $cpf = $row['cpf_cnpj'];
-
-        if ($row['tipopessoa'] == '1') {
-          $tipopessoa = 'pessoa fisica';
+        if ($row = $result->fetch_assoc()) {
+          $nome = $row['nome_adm'];
+          $email = $row['email_adm'];
+          $usuario = $row['usuario_adm'];
+          $senha = $row['senha_adm'];
         }
-        else{
-          $tipopessoa = 'pessoa juridica';
-        }
-        $empresa = $row['empresa_cliente'];
-        $endereco = $row['endereco_cliente'];
-        $telefone = $row['telefone_cliente'];
-        $email = $row['email_cliente'];
-        $senha = $row['senha'];
 
-        echo"
-        <form class='cadastro' action='../app/altcliente.app.php' method='POST'>
+        echo "
+        <form action='../../app/altadm.app.php' method='POST'>
         <input type='text' name='nome' value='$nome'/>
-        <input type='text' name='cpf' value='$cpf'/>
-        <input type='text' name='tipopessoa' value='$tipopessoa'/>
-        <input type='text' name='empresa' value='$empresa'/>
-        <input type='text' name='endereco' value='$endereco'/>
-        <input type='text' name='telefone' value='$telefone'/>
         <input type='text' name='email' value='$email'/>
+        <input type='text' name='usuario' value='$usuario'/>
         <input type='text' name='senha' value='$senha'/>
-        <button type='submit'>Alterar</button>
-        </form>
-        ";
+        <button type='submit'>Alterar</button>"
+         ?>
+      </form>
 
-      }
-     ?>
-   </main>
-  </body>
-</html>
+    </div>
+
+    </body>

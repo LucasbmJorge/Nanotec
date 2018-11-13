@@ -12,13 +12,13 @@
 
    if($row = $result->fetch_assoc()){
 
-    $_SESSION['id'] = $row['chave_equipe'];
-    $_SESSION['id_numero'] = $row['id_equipe'];
+    $_SESSION['chave'] = $row['chave_equipe'];
+    $_SESSION['id'] = $row['id_equipe'];
     $_SESSION['nome'] = $row['nome_da_equipe'];
     $_SESSION['email'] = $row['email_equipe'];
     $_SESSION['tipologin'] = 'equipe';
 
-    header("Location:../view/painelequipe.view.php");
+    header("Location:../view/Equipe/painelequipe.view.php");
   }
   else{
     echo "Login ou Senha incorretos!";
@@ -39,7 +39,7 @@
     $_SESSION['email'] = $row['email_equipe'];
     $_SESSION['tipologin'] = 'equipe';
 
-    header("Location:../view/painelequipe.view.php");
+    header("Location:../view/Equipe/painelequipe.view.php");
  }
  else{
    echo "CPF ou Senha incorretos!";

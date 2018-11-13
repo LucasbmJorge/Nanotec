@@ -1,15 +1,29 @@
 <?php
 
- include "../conecta.php";
+ include "../../includes/conecta.php";
 
  session_start();
- $id = $_SESSION['id'];
- 
- include '../includes/head.php';
+
+   if (!isset($_SESSION['id'])) {
+      header("Location: ../../");
+   } else{
+     if ($_SESSION['administrador']){
+       $id = $_POST['cliente'];
+     } else{
+       $id = $_SESSION['id'];
+     }
+   }
+
+
+ include "../../includes/head.php";
  ?>
 
-  <body>
+  <body id="painel">
+    <header>
+    <?php  include "clinav.php"; ?>
+    </header>
     <main>
+      <div class="controle">
     <?php
 
       $sql = "SELECT * FROM `cliente` WHERE id_cliente = $id;";
@@ -34,7 +48,8 @@
         $senha = $row['senha'];
 
         echo"
-        <form class='cadastro' action='../app/altcliente.app.php' method='POST'>
+        <form action='../../app/altcliente.app.php' method='POST'>
+        <input type='hidden' name='cliente' value='$id'/>
         <input type='text' name='nome' value='$nome'/>
         <input type='text' name='cpf' value='$cpf'/>
         <input type='text' name='tipopessoa' value='$tipopessoa'/>
@@ -49,6 +64,7 @@
 
       }
      ?>
+           </div>
    </main>
   </body>
 </html>

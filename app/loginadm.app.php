@@ -17,7 +17,7 @@
   $_SESSION['email'] = $row['email_adm'];
   $_SESSION['administrador'] = true;
 
-  header("Location:../view/painelAdm.view.php");
+  header("Location:../view/Admin/painelAdm.view.php");
 
   }
   else{

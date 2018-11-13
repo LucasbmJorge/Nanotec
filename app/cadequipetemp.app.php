@@ -39,7 +39,7 @@
 
     $resultservico = $conn->query($sqlservico);
 
-    header("Location: ../view/registrandolhe.php");
+    header("Location: ../view/Equipe/registrandolhe.php");
 
 
 

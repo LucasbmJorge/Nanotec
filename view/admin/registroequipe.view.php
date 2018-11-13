@@ -8,12 +8,15 @@
    header("Location: ../../");
  }
  else{
-  include '../../includes/head2.php';
-  include '../../conecta.php';
+  include '../../includes/head.php';
+  include '../../includes/conecta.php';
 }
  ?>
 
  <body id="painel">
+   <header>
+     <?php include "admnav.php"; ?>
+   </header>
 
    <div class="col controle">
      <h2>Equipes para registrar</h2>

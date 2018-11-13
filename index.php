@@ -36,17 +36,16 @@
             if($adm) {
             echo "<a href='view/Admin/painelAdm.view.php'><li>PAINEL</li></a>";
             }
-            else{
-              if ($_SESSION['tipologin'] == 'cliente') {
+            else if ($_SESSION['tipologin'] == 'cliente') {
               echo "<a href='view/Cliente/painelcliente.view.php'><li>PAINEL</li></a>";
               }
-              if ($_SESSION['tipologin'] == 'equipe') {
+            else if ($_SESSION['tipologin'] == 'equipe') {
               echo "<a href='view/Equipe/painelequipe.view.php'><li>PAINEL</li></a>";
               }
             }else{
           echo "
-          <a href='view/cadescolha.view.php'><li>REGISTRAR</li></a>
-          <a href='view/logescolha.view.php'><li>LOGIN</li></a>
+          <a href='view/Cadastro/cadescolha.view.php'><li>REGISTRAR</li></a>
+          <a href='view/Login/logescolha.view.php'><li>LOGIN</li></a>
           ";
         }?>
         <a href=""><li>SOBRE NÓS</li></a>
@@ -54,7 +53,7 @@
       </nav>
 
     <h1 class="col bem">BEM VINDO A <span>NANOTEC</span></h1>
-    <h2 class="col l-12">Somos uma empresa focada em unir demanda e oferta de projetos
+    <h2 class="col l-11">Somos uma empresa focada em unir demanda e oferta de projetos
                           para garantir que empresas talentosas possam entregar projetos de qualidade
                           a clientes que querem algo pronto rápido.</h2>
 

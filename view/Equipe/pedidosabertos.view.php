@@ -1,16 +1,16 @@
 <?php
- include "../conecta.php";
+ include "../../includes/conecta.php";
 
  session_start();
  if(!isset($_SESSION['id'])){
    header("Location:../");
  } else{
  $nome = $_SESSION['nome'];
- $id = $_SESSION['id'];
+ $chave = $_SESSION['chave'];
  $email = $_SESSION['email'];
 
 }
- include '../includes/head.php';
+include "../../includes/head.php";
  ?>
 
  <body id="painel">
@@ -28,7 +28,7 @@
  <main> <br> <br>
  <div class='controle'>
    <?php
-     $sql = "SELECT * FROM `servico` WHERE chave_equipe = '$id'";
+     $sql = "SELECT * FROM `servico` WHERE chave_equipe = '$chave'";
 
      $result = mysqli_query($conn, $sql);
 
@@ -74,7 +74,7 @@
        <p> <b>Data to pedido:<br></b> $data</p>
        <p> <b>Endereço:<br></b> $cidade <br> $endereco</p>
        <p> <b>Sobre o pedido:<br></b> $obs</p>
-       <form action='../app/aceitarpedido.app.php' method='post'>
+       <form action='../../app/aceitarpedido.app.php' method='post'>
   <input type='hidden' name='idpedido' value='$id_pedido'>
   <button type='submit' name='button'>Aceitar</button>
 </form>
@@ -91,7 +91,7 @@
        <p> <b>Data to pedido:<br></b> $data</p>
        <p> <b>Endereço:<br></b> $cidade <br> $endereco</p>
        <p> <b>Sobre o pedido:<br></b> $obs</p>
-       <form action='../app/aceitarpedido.app.php' method='post'>
+       <form action='../../app/aceitarpedido.app.php' method='post'>
   <input type='hidden' name='idpedido' value='$id_pedido'>
   <button type='submit' name='button'>Aceitar</button>
 </form>
@@ -108,7 +108,7 @@
        <p> <b>Data to pedido:<br></b> $data</p>
        <p> <b>Endereço:<br></b> $cidade <br> $endereco</p>
        <p> <b>Sobre o pedido:<br></b> $obs</p>
-       <form action='../app/aceitarpedido.app.php' method='post'>
+       <form action='../../app/aceitarpedido.app.php' method='post'>
   <input type='hidden' name='idpedido' value='$id_pedido'>
   <button type='submit' name='button'>Aceitar</button>
 </form>
@@ -125,7 +125,7 @@
        <p> <b>Data to pedido:<br></b> $data</p>
        <p> <b>Endereço:<br></b> $cidade <br> $endereco</p>
        <p> <b>Sobre o pedido:<br></b> $obs</p>
-       <form action='../app/aceitarpedido.app.php' method='post'>
+       <form action='../../app/aceitarpedido.app.php' method='post'>
   <input type='hidden' name='idpedido' value='$id_pedido'>
   <button type='submit' name='button'>Aceitar</button>
 </form>
@@ -142,7 +142,7 @@
        <p> <b>Data to pedido:<br></b> $data</p>
        <p> <b>Endereço:<br></b> $cidade <br> $endereco</p>
        <p> <b>Sobre o pedido:<br></b> $obs</p>
-       <form action='../app/aceitarpedido.app.php' method='post'>
+       <form action='../../app/aceitarpedido.app.php' method='post'>
   <input type='hidden' name='idpedido' value='$id_pedido'>
   <button type='submit' name='button'>Aceitar</button>
 </form>
@@ -159,7 +159,7 @@
        <p> <b>Data to pedido:<br></b> $data</p>
        <p> <b>Endereço:<br></b> $cidade <br> $endereco</p>
        <p> <b>Sobre o pedido:<br></b> $obs</p>
-       <form action='../app/aceitarpedido.app.php' method='post'>
+       <form action='../../app/aceitarpedido.app.php' method='post'>
   <input type='hidden' name='idpedido' value='$id_pedido'>
   <button type='submit' name='button'>Aceitar</button>
 </form>

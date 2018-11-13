@@ -20,5 +20,5 @@
   $result= $conn->query($sql);
 
   echo "<br> <p>Pedido realizado com sucesso</p> <br>
-   <a href='../view/painelcliente.view.php'>Voltar</a>";
+   <a href='../view/Cliente/painelcliente.view.php'>Voltar</a>";
  ?>

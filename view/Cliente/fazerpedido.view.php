@@ -7,24 +7,19 @@
  $id = $_SESSION['id'];
  $email = $_SESSION['email'];
 
- include '../includes/head.php';
+
+ include "../../includes/head.php";
  ?>
 
  <body id="registro">
 
  <header>
-   <nav>
-   <a href="#" class="col nanotec">NANOTEC</a>
-     <ul>
-       <a href='painelcliente.view.php'><li>PAINEL</li></a>
-       <a href=""><li>SOBRE NÓS</li></a>
-     </ul>
-   </nav>
+   <?php include "clinav.php"; ?>
  </header>
 
  <main>
 
-   <form class="cadastro" action="../app/registropedido.app.php" method="post">
+   <form class="cadastro" action="../../app/registropedido.app.php" method="post">
    <h1>Fazer pedido:</h1>
 
   <input type="text" name="cidade" placeholder="Cidade" required>

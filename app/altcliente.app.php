@@ -1,8 +1,8 @@
 <?php
  session_start();
  include "../includes/conecta.php";
- $id = $_SESSION['id'];
-
+ $id = $_POST['cliente'];
+ echo "$id";
 
  $nome = $_POST['nome'];
  $cpf = $_POST['cpf'];
@@ -21,7 +21,6 @@
   `email_cliente` = '$email',
   `senha` = '$senha'
   WHERE `cliente`.`id_cliente` = $id";
-
 
   $result = $conn -> query($sql);
 

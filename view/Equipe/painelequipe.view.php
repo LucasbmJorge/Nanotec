@@ -1,7 +1,7 @@
 <?php
  session_start();
  $nome = $_SESSION['nome'];
- include '../includes/head.php';
+ include "../../includes/head.php";
  ?>
 
   <body id="painel">
@@ -22,9 +22,9 @@
       "; ?>
 
     <a href="pedidosabertos.view.php">Lista de pedidos</a>
-    <a href="Equipe/pedidosaceitos.view.php">Pedidos em andamento</a>
-    <a href="altcliente.view.php">Configurações da conta</a>
-    <a href="../app/logout.app.php">Log Out</a>
+    <a href="pedidosaceitos.view.php">Pedidos em andamento</a>
+    <a href="altequipe.view.php">Configurações da conta</a>
+    <a href="../../app/logout.app.php">Log Out</a>
 
     </div>
   </body>

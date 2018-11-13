@@ -8,8 +8,9 @@
    header("Location: ../../");
  }
  else{
-  include '../../includes/head2.php';
-  include '../../conecta.php';
+  include '../../includes/head.php';
+  include '../../includes/conecta.php';
+  include '../../includes/mascara.php';
 
 
   $queequipe = $_POST['queequipe'];
@@ -21,10 +22,12 @@
 
   if ($row = $result->fetch_assoc()){
     $nomee = $row['nome_da_equipe'];
-    $cnpje = $row['cnpj_equipe'];
+    $cnpjo = $row['cnpj_equipe'];
+    $cnpje = Mask("##.###.###/####-##", $cnpjo);
     $integrantes = $row['numero_integrantes'];
     $enderecoe = $row['endereco_equipe'];
-    $telefonee = $row['telefone_equipe'];
+    $telefono = $row['telefone_equipe'];
+    $telefonee = Mask("(##)####-####", $telefono);
     $emaile = $row['email_equipe'];
     $uide = $row['chave_equipe'];
 
@@ -80,6 +83,6 @@
      </div>
 
      <a href="../../app/aprovarequipe.app.php">Aprovar</a>
-     <a href="recusarequipe.view.php">Recusar</a>
+     <a href="../../app/recusarequipe.app.php">Recusar</a>
    </div>
  </body>

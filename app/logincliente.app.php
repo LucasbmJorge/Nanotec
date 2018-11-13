@@ -17,7 +17,7 @@
   $_SESSION['email'] = $row['email_cliente'];
   $_SESSION['tipologin'] = 'cliente';
 
-  header("Location:../view/painelcliente.view.php");
+  header("Location:../view/Cliente/painelcliente.view.php");
 
   }
   else{

@@ -7,14 +7,15 @@
  $id = $_SESSION['id'];
  $email = $_SESSION['email'];
 
- include '../includes/head.php';
+
+ include "../../includes/head.php";
  ?>
 
   <body id="painel">
 
     <header>
       <nav>
-      <a href="#" class="col nanotec">NANOTEC</a>
+      <a href="../../" class="col nanotec">NANOTEC</a>
         <ul>
           <a class="onthis"><li>PAINEL</li></a>
           <a href="../"><li>SOBRE NÓS</li></a>
@@ -29,7 +30,7 @@
     <a class="col" href="fazerpedido.view.php">Fazer pedido</a>
     <a class="col" href="acompanharpedido.view.php">Acompanhamento de pedidos</a>
     <a class="col" href="altcliente.view.php">Configurações de conta</a>
-    <a class="col" href="../app/logout.app.php">Log Out</a>
+    <a class="col" href="../../app/logout.app.php">Log Out</a>
     </div>
   </body>
 </html>

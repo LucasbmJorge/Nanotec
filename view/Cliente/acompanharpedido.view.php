@@ -1,5 +1,6 @@
 <?php
- include "../conecta.php";
+ include "../../includes/conecta.php";
+  include "../../includes/mascara.php";
 
  session_start();
  if(!isset($_SESSION['id'])){
@@ -10,19 +11,14 @@
  $email = $_SESSION['email'];
 
 }
- include '../includes/head.php';
+
+include "../../includes/head.php";
  ?>
 
  <body id="green">
 
  <header>
-   <nav>
-   <a href="#" class="col nanotec">NANOTEC</a>
-     <ul>
-       <a href='painelcliente.view.php'><li>PAINEL</li></a>
-       <a href=""><li>SOBRE NÓS</li></a>
-     </ul>
-   </nav>
+   <?php include 'clinav.php'; ?>
  </header>
 
   <main>
@@ -30,7 +26,7 @@
       <h2>Meus pedidos</h2>
       <?php
 
-        $sql = "SELECT * FROM `pedido` WHERE id_cliente = $id;";
+        $sql = "SELECT * FROM `pedido` WHERE id_cliente = $id ORDER BY status_p desc, data_pedido desc";
 
         $result = $conn -> query($sql);
 
@@ -42,30 +38,44 @@
          $orcamento = $row['orcamento'];
          $observacao = $row['observacao'];
          $data_pedido = $row['data_pedido'];
-         $newDate = date("d-m-Y", strtotime($data_pedido));
+         $newDate = date("d/m/Y", strtotime($data_pedido));
          $status_p = $row['status_p'];
          $id_cliente = $row['id_cliente'];
          $id_equipe = $row['id_equipe'];
 
-         if($status_p == 'aberto'){
-
-        echo"
-        <div class='pedido'>
-          <p class='col l-5 '><b>Tipo de pedido:</b> $tipo_pedido</p>
-          <p class='col l-5 '><b>Endereço:</b> $endereco</p>
-          <p class='col l-5 '><b>Orçamento:</b> $orcamento</p>
-          <p class='col l-5 '><b>Observação:</b> $observacao</p>
-          <p class='col l-5 '><b>Data do pedido:</b> $newDate</p>
-          <p class='col l-5 '><b>Status do pedido:</b> $status_p</p>
-        </div>";
-      }
-      else if($status_p == 'andamento'){
+                if($status_p == 'andamento'){
         $sqlo = "SELECT * FROM `equipe` WHERE id_equipe = $id_equipe";
         $resulto = $conn -> query($sqlo);
-        if($row = $resulto -> fetch_assoc()){
+        if($col = $resulto -> fetch_assoc()){
+          $equipe = $col['nome_da_equipe'];
+          $equipemail = $col['email_equipe'];
+          $equipefone = $col['telefone_equipe'];
+                  echo"
+                <div class='pedido'>
+                  <p class='col l-5 '><b>Tipo de pedido:</b> $tipo_pedido</p>
+                  <p class='col l-5 '><b>Endereço:</b> $endereco</p>
+                  <p class='col l-5 '><b>Orçamento:</b> $orcamento</p>
+                  <p class='col l-5 '><b>Observação:</b> $observacao</p>
+                  <p class='col l-5 '><b>Data do pedido:</b> $newDate</p>
+                  <p class='col l-5 '><b>Status do pedido:</b> $status_p</p>
+                  <p class='col l-5 '><b>Equipe:</b> $equipe</p>
+                  <p class='col l-5 '><b>E-mail da Equipe:</b> $equipemail</p>
+                  <p class='col l-5 '><b>Telefone da Equipe:</b> $equipefone</p>
+                </div>";
 
         }
-      }//FIM else;
+      }else if($status_p == 'aberto'){
+
+              echo"
+              <div class='pedido'>
+                <p class='col l-5 '><b>Tipo de pedido:</b> $tipo_pedido</p>
+                <p class='col l-5 '><b>Endereço:</b> $endereco</p>
+                <p class='col l-5 '><b>Orçamento:</b> $orcamento</p>
+                <p class='col l-5 '><b>Observação:</b> $observacao</p>
+                <p class='col l-5 '><b>Data do pedido:</b> $newDate</p>
+                <p class='col l-5 '><b>Status do pedido:</b> $status_p</p>
+              </div>";
+            }//FIM else;
 
     }//FIM while;
         ?>

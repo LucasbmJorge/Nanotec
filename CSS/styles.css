@@ -140,7 +140,9 @@ header nav {
     color: #009688; }
   header nav .nanotec {
     width: 54%;
-    padding: 0.8rem;
+    position: relative;
+    top: .5rem;
+    left: .5rem;
     font-weight: 500;
     font-size: 2rem;
     color: #009688;
@@ -158,7 +160,7 @@ header nav {
   header nav li {
     font-size: 1.2rem;
     transition: 0.4s ease;
-    padding: 1.22rem 0; }
+    padding: 1rem 0; }
   header nav li:hover {
     background-color: #e6e6e6; }
   header nav .onthis {
@@ -189,13 +191,13 @@ header .hero {
     left: 0;
     width: 100%; }
 header .bem {
-  font-size: 5rem;
+  font-size: 4.6rem;
   font-weight: 500;
   color: white;
   position: absolute;
-  width: 80%;
+  width: 70%;
   top: 14rem;
-  left: 10%;
+  left: 15%;
   z-index: 0; }
   header .bem span {
     color: #009688; }
@@ -204,8 +206,8 @@ header h2 {
   position: absolute;
   top: 20.5rem;
   line-height: 2.2rem;
-  left: 14%;
-  font-size: 1.6rem;
+  left: 17%;
+  font-size: 1.4rem;
   font-weight: 400;
   text-align: left; }
 
@@ -299,7 +301,6 @@ header h2 {
   #registro .pedidos, #green .pedidos {
     background-color: white;
     width: 80%;
-    height: 80vh;
     margin: auto;
     margin-top: 6rem;
     padding: .5rem 0;
@@ -317,7 +318,7 @@ header h2 {
   background-color: #ceeadd; }
   #painel .controle {
     background-color: white;
-    width: 80%;
+    width: 70%;
     margin: auto;
     margin-top: 8rem;
     padding: 1rem 0;
@@ -336,7 +337,7 @@ header h2 {
       border: 1px solid lightgrey;
       background-color: white;
       padding: 0.5rem 0.4rem;
-      width: auto;
+      width: 30%;
       margin: 0.5rem;
       color: #009688;
       text-decoration: none;

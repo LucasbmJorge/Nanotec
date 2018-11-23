@@ -9,8 +9,15 @@
  }
 }
 
-$cor-1:#0ba562;
-$cor-2:#009688;
-$cor-3:#ceeadd;
+$cor-1: #5e8ad1;
+$cor-2: lighten( $cor-1, 10%);
+$cor-3: lighten( $cor-1, 22%);
 $cor-4:#F5F1D5;
 $cor-5:#F2845C;
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+   content: "";
+   display: table;
+   clear: both;
+  }

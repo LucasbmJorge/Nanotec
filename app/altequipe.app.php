@@ -1,6 +1,10 @@
 <?php
  include "../includes/conecta.php";
 
+ if (!isset($_SESSION["id"]) || $_SESSION['tipologin'] != 'equipe'){
+   header("Location: ../");
+ }
+
   $id_equipe = $_POST['equipe'];
   $nome = $_POST['nome'];
   $cnpj = $_POST['cnpj'];

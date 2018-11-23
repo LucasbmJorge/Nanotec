@@ -6,5 +6,6 @@
     <link rel="stylesheet" href="../../CSS/fontawesome-all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="../../CSS/styles.css">
-    <link rel="stylesheet" href="../../CSS/remove-colors.css">
+    <script src="../../JS/jQuery.min.js" charset="utf-8"></script>
+    <script src="../../JS/jquery.mask.js" charset="utf-8"></script>
   </head>

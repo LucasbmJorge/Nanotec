@@ -35,7 +35,6 @@
     <option value="sites">Site</option>
   </select>
 
-  <input type="text" name="orcamento" placeholder="Orçamento" required>
   <textarea name="observacao" placeholder="Observações:" required></textarea>
 
   <button type="submit" name="button">Enviar</button>

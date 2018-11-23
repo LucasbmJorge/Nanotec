@@ -18,7 +18,7 @@
       <a href="../../" class="col nanotec">NANOTEC</a>
         <ul>
           <a class="onthis"><li>PAINEL</li></a>
-          <a href="../"><li>SOBRE NÓS</li></a>
+          <a href="../../"><li>SOBRE NÓS</li></a>
         </ul>
       </nav>
     </header>

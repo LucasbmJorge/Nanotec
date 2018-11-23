@@ -14,8 +14,8 @@
     <main>
       <form class="cadastro" action="../../app/logincliente.app.php" method="post">
         <h1>Login cliente:</h1>
-        <input type="text" name="cpf" value="" placeholder="cpf/cnpj (sómente numeros)" required>
-        <input type="text" name="senha" value="" placeholder="Senha" required>
+        <input type="text" name="cpf" value="" placeholder="cpf/cnpj (sómente numeros)" autocomplete="off" required>
+        <input type="text" name="senha" value="" placeholder="Senha" autocomplete="off" required>
         <br>
         <button type="submit" name="button">Entrar</button>
       </form>

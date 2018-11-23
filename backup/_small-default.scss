@@ -1,0 +1,377 @@
+html{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+*{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+   box-sizing: border-box; }
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+/*Header Styles*/
+
+header{
+
+  nav{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 1px lightgrey;
+    text-align: left;
+    z-index: 2;
+    font-weight: 500;
+
+    .nanotec{
+      // width: 54%;
+      border: 1px solid cyan;
+      position: relative;
+      top: .5rem;
+      left: .5rem;
+      font-weight: 500;
+      font-size: 2rem;
+      color: darken($cor-2, 10%);
+      text-decoration: none;
+      text-align: left;
+    }
+
+    ul{
+      width: 44%;
+      text-align: center;
+      text-align: right;
+    }
+    a{
+      color: darken($cor-2, 10%);
+      width:29%;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    li{
+      font-size: 1.2rem;
+      transition: 0.4s ease;
+      padding: 1rem 0;
+    }
+    li:hover{
+      background-color: darken( white, 10%);
+    }
+
+    .onthis{
+      color:white;
+      background-color: $cor-2;
+      cursor: default;
+
+      i{
+        color:white;
+      }
+    }
+
+    .onthis:hover{
+      color:white;
+      background-color: $cor-2;
+      cursor: default;
+    }
+  }//FIM nav;
+
+  .hero{
+    height: 100vh;
+    background-color: black;
+    width: 100%;
+    padding-top: 15vh;
+    overflow: hidden;
+
+    video{
+      width: 100%;
+      position: relative;
+      z-index: 0;
+      opacity: 0.6;
+     -webkit-filter: hue-rotate(50deg); /* Safari 6.0 - 9.0 */
+     filter: hue-rotate(50deg);
+    }
+
+
+    img{
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  } //FIM hero;
+
+
+
+  .bem{
+     font-size: 4.6rem;
+     font-weight: 500;
+     color: white;
+     position: absolute;
+     width: 70%;
+     top: 14rem;
+     left: 15%;
+     z-index: 0;
+
+    span{
+      color: $cor-2;
+    }
+  }
+
+  p{
+    color: white;
+    position: absolute;
+    top: 20.5rem;
+    line-height: 2.2rem;
+    left: 17%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: left;
+  }
+}//FIM header;
+
+
+
+
+
+/*Main Styles*/
+
+
+ #registro, #green{
+   background-color: $cor-3;
+
+   main{
+  margin-top: 2rem;
+
+  h1, h2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    color: $cor-2;
+  }
+
+  .cadastro, .escolha{
+    width: 25%;
+    box-shadow: 0px 1px 5px grey;
+    background-color: white;
+    margin: auto;
+    margin-top: 8rem;
+    font-weight: 400;
+    padding: 1rem 0;
+    border-radius: 0.2rem;
+
+    button{
+      border: none;
+      background-color: $cor-2;
+      color:white;
+      padding: 0.5rem 1rem;
+      margin-top: 1.5rem;
+      border-radius: 0.2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: 1px solid white;
+      transition: 0.2s ease;
+    }
+    button:hover{
+      color: $cor-2;
+      background-color: white;
+      border: 1px solid $cor-2;
+    }
+
+    a{
+      border: 1px solid grey;
+      margin: auto;
+      margin-bottom:1rem;
+      padding: 0.5rem;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.6rem;
+      color: grey;
+      width: 60%;
+      transition: 0.5s ease;
+      border-radius: .2rem;
+    }
+    a:hover{
+      color: white;
+      background-color: $cor-2;
+        border: 1px solid $cor-2;
+    }
+  }//FIM cadastro;
+
+  .equipe{
+    width: 60%;
+      box-shadow: 0px 1px 5px grey;
+      background-color: white;
+      margin: auto;
+      margin-top: 5rem;
+      font-weight: 400;
+      padding: 1rem 0;
+      border-radius: 0.2rem;
+
+      button{
+        border: none;
+        background-color: $cor-2;
+        color:white;
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: 1px solid white;
+        transition: 0.2s ease;
+      }
+      button:hover{
+        color: $cor-2;
+        background-color: white;
+        border: 1px solid $cor-2;
+      }
+  }//Fim equipe;
+
+  input, select, textarea{
+    width: 90%;
+    margin: 0.5rem 0;
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color:$cor-2;
+  }
+  textarea{
+    width: 90%;
+    height: 10rem;
+    resize: none;
+  }
+  .check{
+    width:10%;
+  }
+
+}//fim registro main;
+
+ .pedidos{
+   background-color: white;
+   width: 80%;
+   margin: auto;
+   margin-top: 6rem;
+   padding: .5rem 0;
+   box-shadow: 0px 1px 5px darken($cor-3, 20%);
+
+   .pedido{
+     width: 100%;
+     padding: 0.5rem 1rem;
+     border-top: 1px solid lightgrey;
+     border-bottom: 1px solid lightgrey;
+     margin-top: -1px;
+
+     p{
+       margin: 0.5rem 0;
+     }
+   }
+ }//FIM pedidos;
+
+}//FIM registro, green;
+
+#painel{
+  background-color: $cor-3;
+
+  .controle{
+    background-color: white;
+    width: 70%;
+    margin:auto;
+    margin-top:8rem;
+    padding: 1rem 0;
+    padding-bottom: 2rem;
+    border-radius: 0.2rem;
+
+    h2{
+      font-weight:400;
+      font-size: 1.6rem;
+      color: #222;
+      margin: 1rem 0;
+      margin-bottom: 2rem;
+
+      span{
+        color: $cor-2;
+        font-weight: 500;
+      }
+    }
+    a, button{
+        border: 1px solid lightgrey;
+        background-color: white;
+        padding: 0.5rem 0.4rem;
+        width: 30%;
+        margin: 0.5rem;
+        color: $cor-2;
+        text-decoration: none;
+        font-size: 1.3rem;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    a:hover, button:hover{
+      background-color: $cor-2;
+      color:white;
+    }
+
+    .pedido{
+      width: 100%;
+      border-bottom: 1px solid lightgrey;
+      padding: 1.5rem;
+      // text-align: left;
+
+      p{
+        display: inline-block;
+        line-height: 1.2rem;
+        margin: .5rem .3rem;
+        width: 30%;
+        vertical-align: top;
+
+        b{
+          color: darken($cor-2, 5%);
+          margin: 1.5rem 0;
+        }
+      }
+      button{
+        margin: auto;
+      }
+    }//FIM pedido;
+  }//FIM controle;
+}//FIM painel;
+
+.visor{
+
+  div{
+    text-align: left;
+    margin: 0 0.5rem;
+
+    h3{
+      text-align: center;
+    }
+
+    p{
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.especial{
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #afafaf;
+  text-align: left;
+
+  input{
+    cursor:pointer;
+    height: 1.5rem;
+  }
+
+  h3{
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  p{
+    display: inline;
+    text-align: center;
+  }
+}
+
+
+
+
+/*Footer styles*/

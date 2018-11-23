@@ -2,24 +2,25 @@ html{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 *{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
    box-sizing: border-box; }
 
-/*----- Clearfix: Force an Element not to collapse -----*/
-.clearfix:after {
-   content: "";
-   display: table;
-   clear: both;
-  }
+   /*----- Clearfix: Force an Element not to collapse -----*/
+   .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+     }
 
 
-/* ----------- GRID ----------- */
-@for $i from 1 through 6{
-  $w: ($i / 6) * 96%;
+   /* ----------- GRID ----------- */
+   @for $i from 1 through 6{
+     $w: ($i / 6) * 96%;
 
-  .s-#{$i} {width:$w;}
-}
+     .s-#{$i} {width:$w;}
+   }
 
 body{
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 /*Header Styles*/
 
@@ -36,9 +37,6 @@ header{
     z-index: 2;
     font-weight: 500;
 
-   i{
-     color: $cor-2;
-   }
     .nanotec{
       width: 54%;
       position: relative;
@@ -46,18 +44,18 @@ header{
       left: .5rem;
       font-weight: 500;
       font-size: 2rem;
-      color: $cor-2;
+      color: darken($cor-2, 10%);
       text-decoration: none;
       text-align: left;
     }
 
     ul{
       width: 44%;
-      text-align: center;
+      // text-align: center;
       text-align: right;
     }
     a{
-      color: darken($cor-2, 3%);
+      color: darken($cor-2, 10%);
       width:29%;
       text-decoration: none;
       text-align: center;
@@ -75,18 +73,12 @@ header{
     .onthis{
       color:white;
       background-color: $cor-2;
-      cursor: default;
+      cursor: pointer;
 
       i{
         color:white;
       }
-    }
-
-    .onthis:hover{
-      color:white;
-      background-color: $cor-2;
-      cursor: default;
-    }
+    }//FIM onthis;
   }//FIM nav;
 
   .hero{
@@ -101,6 +93,8 @@ header{
       position: relative;
       z-index: 0;
       opacity: 0.6;
+     -webkit-filter: hue-rotate(50deg); /* Safari 6.0 - 9.0 */
+     filter: hue-rotate(50deg);
     }
 
 
@@ -117,7 +111,7 @@ header{
 
   .bem{
      font-size: 4.6rem;
-     font-weight: 500;
+     font-weight: 400;
      color: white;
      position: absolute;
      width: 70%;
@@ -126,17 +120,20 @@ header{
      z-index: 0;
 
     span{
-      color: $cor-2;
+      color: $cor-1;
+      font-weight: 500;
     }
-  }
+  }//FIM bem;
 
-  h2{
-    color: white;
+  .vindo{
+    color: #dfdfdf;
     position: absolute;
-    top: 20.5rem;
-    line-height: 2.2rem;
-    left: 17%;
-    font-size: 1.4rem;
+    top: 20rem;
+    line-height: 1.7rem;
+    left: 16%;
+    width: 68%;
+    margin: auto;
+    font-size: 1.3rem;
     font-weight: 400;
     text-align: left;
   }
@@ -149,7 +146,7 @@ header{
 /*Main Styles*/
 
 
- #registro, #green{
+ #registro, #green, #blue{
    background-color: $cor-3;
 
    main{
@@ -159,7 +156,7 @@ header{
     font-size: 2rem;
     font-weight: 500;
     margin: 1rem 0;
-    color: $cor-2;
+    color: darken($cor-1, 10%);
   }
 
   .cadastro, .escolha{
@@ -167,7 +164,7 @@ header{
     box-shadow: 0px 1px 5px grey;
     background-color: white;
     margin: auto;
-    margin-top: 8rem;
+    margin-top: 6rem;
     font-weight: 400;
     padding: 1rem 0;
     border-radius: 0.2rem;
@@ -245,7 +242,7 @@ header{
     padding: 0.4rem;
     font-size: 1.1rem;
     font-weight: 300;
-    color:$cor-2;
+    color:$cor-1;
   }
   textarea{
     width: 90%;
@@ -276,15 +273,21 @@ header{
      p{
        margin: 0.5rem 0;
      }
-   }
+
+     .texta{
+       resize: none;
+       width: 60%;
+       height: 20rem;
+     }
+   }//FIM pedido;
  }//FIM pedidos;
 
 }//FIM registro, green;
 
 #painel{
   background-color: $cor-3;
-
-  .controle{
+}
+  .controle, .box{
     background-color: white;
     width: 70%;
     margin:auto;
@@ -308,10 +311,11 @@ header{
     a, button{
         border: 1px solid lightgrey;
         background-color: white;
-        padding: 0.5rem 0.4rem;
-        width: 30%;
-        margin: 0.5rem;
-        color: $cor-2;
+        padding: 0.8rem 0.4rem;
+        width: 40%;
+        margin: 0.8rem;
+        color: $cor-1;
+        font-weight: 500;
         text-decoration: none;
         font-size: 1.3rem;
         transition: 0.5s ease;
@@ -343,9 +347,15 @@ header{
       button{
         margin: auto;
       }
+
+      textarea{
+        resize: none;
+        width: 40%;
+        margin-bottom: 2rem;
+        height: 10rem;
+      }
     }//FIM pedido;
   }//FIM controle;
-}//FIM painel;
 
 .visor{
 
@@ -385,6 +395,22 @@ header{
   }
 }
 
+#sobre{
+  width: 100%;
+  padding-top: 5rem;
+
+  .sobre{
+    width: 100%;
+
+    h2{
+      font-size: 2rem;
+      color: black;
+      font-weight: 500;
+      color: $cor-1;
+      border-bottom: 1px solid $cor-2;
+    }
+  }
+}
 
 
 

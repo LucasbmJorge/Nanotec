@@ -44,7 +44,7 @@
         <input type='text' name='endereco' value='$endereco'/>
         <input type='text' name='telefone' value='$telefone'/>
         <input type='text' name='email' value='$email'/>
-        <input type='text' name='senha' value='$senha'/>
+        <input type='hidden' name='senha' value='$senha'/>
         <button type='submit'>Alterar</button>
         </form>
         ";

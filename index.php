@@ -52,10 +52,14 @@
         </ul>
       </nav>
 
-    <h1 class="col bem">BEM VINDO A <span>NANOTEC</span></h1>
-    <h2 class="col l-11">Somos uma empresa focada em unir demanda e oferta de projetos
-                          para garantir que empresas talentosas possam entregar projetos de qualidade
-                          a clientes que querem algo pronto rápido.</h2>
+    <h1 class="col bem">Bem vindo a <span>NANOTEC</span></h1>
+    <p class="col vindo">A Nanotec é uma empresa que trabalha
+       realizando assistencia na área de tecnologia e desenvolvendo
+        de projetos. Nas consultorias, focamos em entender o problema
+         do cliente e buscar qual a melhor solução, seja a alteração de
+          alguma tecnologia que o cliente está utilizando ou o desenvolvimento
+           de algo novo, sempre objetivando o retorno do investimento do
+           cliente.</p>
 
 
 

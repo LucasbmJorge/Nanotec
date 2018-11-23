@@ -14,8 +14,8 @@
     <main>
       <form class="cadastro" action="../../app/loginadm.app.php" method="post">
         <h1>Login Admin:</h1>
-        <input type="text" name="usuario" placeholder="Usuario" required>
-        <input type="text" name="senha" placeholder="Senha" required>
+        <input type="text" name="usuario" placeholder="Usuario" autocomplete="off" required>
+        <input type="text" name="senha" placeholder="Senha" autocomplete="off" required>
         <br>
         <button type="submit" name="button">Entrar</button>
       </form>

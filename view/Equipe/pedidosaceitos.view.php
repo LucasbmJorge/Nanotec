@@ -51,18 +51,22 @@ include "../../includes/mascara.php";
      }
 
      echo "<div class='pedido'>
-     <p><b>Cliente</b>: $cliente</p>
-       <p class='col l-5 '><b>Tipo de pedido:</b> $tipo_pedido</p>
-       <p class='col l-5 '><b>Endereço:</b> $endereco</p>
-       <p class='col l-5 '><b>Orçamento:</b> $orcamento</p>
-       <p class='col l-5 '><b>Observação:</b> $observacao</p>
-       <p class='col l-5 '><b>Data do pedido:</b> $data</p>
-       <p class='col l-5 '><b>E-mail do Cliente:</b> $email_cliente</p>
-       <p class='col l-5 '><b>Telefone do Cliente:</b> $telefone_cliente</p> <br> <br>
+     <p><b>Cliente:</b> <br> $cliente</p>
+       <p class='col l-5 '><b>Tipo de pedido:</b> <br> $tipo_pedido</p>
+       <p class='col l-5 '><b>Endereço:</b> <br> $endereco</p>
+       <p class='col l-5 '><b>Observação:</b> <br> $observacao</p>
+       <p class='col l-5 '><b>Data do pedido:</b> <br> $data</p>
+       <p class='col l-5 '><b>E-mail do Cliente:</b> <br> $email_cliente</p>
+       <p class='col l-5 '><b>Telefone do Cliente:</b> <br> $telefone_cliente</p> <br> <br>
        <form  action='gerarOS.view.php' method='post'>
          <input type='hidden' name='nomecliente' value='$cliente'>
          <input type='hidden' name='enderecocliente' value='$endereco'>
+         <input type='hidden' name='tipopedido' value='$tipo_pedido'>
+         <input type='hidden' name='observacao' value='$observacao'>
          <input type='hidden' name='cpfcliente' value='$cpf'>
+         <input type='hidden' name='telefone' value='$telefono'>
+         <input type='hidden' name='email' value='$email_cliente'>
+         <input type='hidden' name='id_pedido' value='$id_pedido'>
          <button type='submit'>Finalizar Pedido</button>
        </form>
      </div>";

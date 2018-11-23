@@ -30,8 +30,10 @@
     <a href="registroequipe.view.php" class="col">Registrar equipe</a>
     <a href="altadm.view.php" class="col">Configurações da conta</a> <br>
     <a href="equipeescolha.view.php" class="col">Configurações de equipes</a>
+    <a href="../../app/pdfclientes.app.php" class="col">Gerar PDF Clientes</a>
+    <a href="../../app/pdfequipes.app.php" class="col">Gerar PDF Equipes</a>
     <a href="clienteescolha.view.php" class="col">Configurações de clientes</a> <br>
-    <a href="../../app/logout.app.php" class="col">Sair</a>
+    <a href="../../app/logout.app.php" class="col">Log Out</a>
     </div>
   </body>
 </html>

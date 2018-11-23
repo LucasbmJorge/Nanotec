@@ -87,6 +87,12 @@ input, select {
   .col img, .nanotec img, nav img, ul img, ul a img {
     max-width: 100%; }
 
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
@@ -123,7 +129,8 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  text-align: center; }
+  text-align: center;
+  overflow-x: hidden; }
 
 /*Header Styles*/
 header nav {
@@ -136,8 +143,6 @@ header nav {
   text-align: left;
   z-index: 2;
   font-weight: 500; }
-  header nav i {
-    color: #009688; }
   header nav .nanotec {
     width: 54%;
     position: relative;
@@ -145,15 +150,14 @@ header nav {
     left: .5rem;
     font-weight: 500;
     font-size: 2rem;
-    color: #009688;
+    color: #5e8ad1;
     text-decoration: none;
     text-align: left; }
   header nav ul {
     width: 44%;
-    text-align: center;
     text-align: right; }
   header nav a {
-    color: #00877a;
+    color: #5e8ad1;
     width: 29%;
     text-decoration: none;
     text-align: center; }
@@ -165,14 +169,10 @@ header nav {
     background-color: #e6e6e6; }
   header nav .onthis {
     color: white;
-    background-color: #009688;
-    cursor: default; }
+    background-color: #86a7dc;
+    cursor: pointer; }
     header nav .onthis i {
       color: white; }
-  header nav .onthis:hover {
-    color: white;
-    background-color: #009688;
-    cursor: default; }
 header .hero {
   height: 100vh;
   background-color: black;
@@ -183,7 +183,10 @@ header .hero {
     width: 100%;
     position: relative;
     z-index: 0;
-    opacity: 0.6; }
+    opacity: 0.6;
+    -webkit-filter: hue-rotate(50deg);
+    /* Safari 6.0 - 9.0 */
+    filter: hue-rotate(50deg); }
   header .hero img {
     position: fixed;
     z-index: -1;
@@ -192,7 +195,7 @@ header .hero {
     width: 100%; }
 header .bem {
   font-size: 4.6rem;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   position: absolute;
   width: 70%;
@@ -200,39 +203,42 @@ header .bem {
   left: 15%;
   z-index: 0; }
   header .bem span {
-    color: #009688; }
-header h2 {
-  color: white;
+    color: #5e8ad1;
+    font-weight: 500; }
+header .vindo {
+  color: #dfdfdf;
   position: absolute;
-  top: 20.5rem;
-  line-height: 2.2rem;
-  left: 17%;
-  font-size: 1.4rem;
+  top: 20rem;
+  line-height: 1.7rem;
+  left: 16%;
+  width: 68%;
+  margin: auto;
+  font-size: 1.3rem;
   font-weight: 400;
   text-align: left; }
 
 /*Main Styles*/
-#registro, #green {
-  background-color: #ceeadd; }
-  #registro main, #green main {
+#registro, #green, #blue {
+  background-color: #b5c9ea; }
+  #registro main, #green main, #blue main {
     margin-top: 2rem; }
-    #registro main h1, #registro main h2, #green main h1, #green main h2 {
+    #registro main h1, #registro main h2, #green main h1, #green main h2, #blue main h1, #blue main h2 {
       font-size: 2rem;
       font-weight: 500;
       margin: 1rem 0;
-      color: #009688; }
-    #registro main .cadastro, #registro main .escolha, #green main .cadastro, #green main .escolha {
+      color: #386ec4; }
+    #registro main .cadastro, #registro main .escolha, #green main .cadastro, #green main .escolha, #blue main .cadastro, #blue main .escolha {
       width: 25%;
       box-shadow: 0px 1px 5px grey;
       background-color: white;
       margin: auto;
-      margin-top: 8rem;
+      margin-top: 6rem;
       font-weight: 400;
       padding: 1rem 0;
       border-radius: 0.2rem; }
-      #registro main .cadastro button, #registro main .escolha button, #green main .cadastro button, #green main .escolha button {
+      #registro main .cadastro button, #registro main .escolha button, #green main .cadastro button, #green main .escolha button, #blue main .cadastro button, #blue main .escolha button {
         border: none;
-        background-color: #009688;
+        background-color: #86a7dc;
         color: white;
         padding: 0.5rem 1rem;
         margin-top: 1.5rem;
@@ -241,11 +247,11 @@ header h2 {
         cursor: pointer;
         border: 1px solid white;
         transition: 0.2s ease; }
-      #registro main .cadastro button:hover, #registro main .escolha button:hover, #green main .cadastro button:hover, #green main .escolha button:hover {
-        color: #009688;
+      #registro main .cadastro button:hover, #registro main .escolha button:hover, #green main .cadastro button:hover, #green main .escolha button:hover, #blue main .cadastro button:hover, #blue main .escolha button:hover {
+        color: #86a7dc;
         background-color: white;
-        border: 1px solid #009688; }
-      #registro main .cadastro a, #registro main .escolha a, #green main .cadastro a, #green main .escolha a {
+        border: 1px solid #86a7dc; }
+      #registro main .cadastro a, #registro main .escolha a, #green main .cadastro a, #green main .escolha a, #blue main .cadastro a, #blue main .escolha a {
         border: 1px solid grey;
         margin: auto;
         margin-bottom: 1rem;
@@ -257,11 +263,11 @@ header h2 {
         width: 60%;
         transition: 0.5s ease;
         border-radius: .2rem; }
-      #registro main .cadastro a:hover, #registro main .escolha a:hover, #green main .cadastro a:hover, #green main .escolha a:hover {
+      #registro main .cadastro a:hover, #registro main .escolha a:hover, #green main .cadastro a:hover, #green main .escolha a:hover, #blue main .cadastro a:hover, #blue main .escolha a:hover {
         color: white;
-        background-color: #009688;
-        border: 1px solid #009688; }
-    #registro main .equipe, #green main .equipe {
+        background-color: #86a7dc;
+        border: 1px solid #86a7dc; }
+    #registro main .equipe, #green main .equipe, #blue main .equipe {
       width: 60%;
       box-shadow: 0px 1px 5px grey;
       background-color: white;
@@ -270,9 +276,9 @@ header h2 {
       font-weight: 400;
       padding: 1rem 0;
       border-radius: 0.2rem; }
-      #registro main .equipe button, #green main .equipe button {
+      #registro main .equipe button, #green main .equipe button, #blue main .equipe button {
         border: none;
-        background-color: #009688;
+        background-color: #86a7dc;
         color: white;
         padding: 0.5rem 1rem;
         margin-top: 1.5rem;
@@ -281,87 +287,98 @@ header h2 {
         cursor: pointer;
         border: 1px solid white;
         transition: 0.2s ease; }
-      #registro main .equipe button:hover, #green main .equipe button:hover {
-        color: #009688;
+      #registro main .equipe button:hover, #green main .equipe button:hover, #blue main .equipe button:hover {
+        color: #86a7dc;
         background-color: white;
-        border: 1px solid #009688; }
-    #registro main input, #registro main select, #registro main textarea, #green main input, #green main select, #green main textarea {
+        border: 1px solid #86a7dc; }
+    #registro main input, #registro main select, #registro main textarea, #green main input, #green main select, #green main textarea, #blue main input, #blue main select, #blue main textarea {
       width: 90%;
       margin: 0.5rem 0;
       padding: 0.4rem;
       font-size: 1.1rem;
       font-weight: 300;
-      color: #009688; }
-    #registro main textarea, #green main textarea {
+      color: #5e8ad1; }
+    #registro main textarea, #green main textarea, #blue main textarea {
       width: 90%;
       height: 10rem;
       resize: none; }
-    #registro main .check, #green main .check {
+    #registro main .check, #green main .check, #blue main .check {
       width: 10%; }
-  #registro .pedidos, #green .pedidos {
+  #registro .pedidos, #green .pedidos, #blue .pedidos {
     background-color: white;
     width: 80%;
     margin: auto;
     margin-top: 6rem;
     padding: .5rem 0;
-    box-shadow: 0px 1px 5px #87cbab; }
-    #registro .pedidos .pedido, #green .pedidos .pedido {
+    box-shadow: 0px 1px 5px #6690d3; }
+    #registro .pedidos .pedido, #green .pedidos .pedido, #blue .pedidos .pedido {
       width: 100%;
       padding: 0.5rem 1rem;
       border-top: 1px solid lightgrey;
       border-bottom: 1px solid lightgrey;
       margin-top: -1px; }
-      #registro .pedidos .pedido p, #green .pedidos .pedido p {
+      #registro .pedidos .pedido p, #green .pedidos .pedido p, #blue .pedidos .pedido p {
         margin: 0.5rem 0; }
+      #registro .pedidos .pedido .texta, #green .pedidos .pedido .texta, #blue .pedidos .pedido .texta {
+        resize: none;
+        width: 60%;
+        height: 20rem; }
 
 #painel {
-  background-color: #ceeadd; }
-  #painel .controle {
+  background-color: #b5c9ea; }
+
+.controle, .box {
+  background-color: white;
+  width: 70%;
+  margin: auto;
+  margin-top: 8rem;
+  padding: 1rem 0;
+  padding-bottom: 2rem;
+  border-radius: 0.2rem; }
+  .controle h2, .box h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #222;
+    margin: 1rem 0;
+    margin-bottom: 2rem; }
+    .controle h2 span, .box h2 span {
+      color: #86a7dc;
+      font-weight: 500; }
+  .controle a, .controle button, .box a, .box button {
+    border: 1px solid lightgrey;
     background-color: white;
-    width: 70%;
-    margin: auto;
-    margin-top: 8rem;
-    padding: 1rem 0;
-    padding-bottom: 2rem;
-    border-radius: 0.2rem; }
-    #painel .controle h2 {
-      font-weight: 400;
-      font-size: 1.6rem;
-      color: #222;
-      margin: 1rem 0;
-      margin-bottom: 2rem; }
-      #painel .controle h2 span {
-        color: #009688;
-        font-weight: 500; }
-    #painel .controle a, #painel .controle button {
-      border: 1px solid lightgrey;
-      background-color: white;
-      padding: 0.5rem 0.4rem;
+    padding: 0.8rem 0.4rem;
+    width: 40%;
+    margin: 0.8rem;
+    color: #5e8ad1;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.5s ease;
+    cursor: pointer; }
+  .controle a:hover, .controle button:hover, .box a:hover, .box button:hover {
+    background-color: #86a7dc;
+    color: white; }
+  .controle .pedido, .box .pedido {
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    padding: 1.5rem; }
+    .controle .pedido p, .box .pedido p {
+      display: inline-block;
+      line-height: 1.2rem;
+      margin: .5rem .3rem;
       width: 30%;
-      margin: 0.5rem;
-      color: #009688;
-      text-decoration: none;
-      font-size: 1.3rem;
-      transition: 0.5s ease;
-      cursor: pointer; }
-    #painel .controle a:hover, #painel .controle button:hover {
-      background-color: #009688;
-      color: white; }
-    #painel .controle .pedido {
-      width: 100%;
-      border-bottom: 1px solid lightgrey;
-      padding: 1.5rem; }
-      #painel .controle .pedido p {
-        display: inline-block;
-        line-height: 1.2rem;
-        margin: .5rem .3rem;
-        width: 30%;
-        vertical-align: top; }
-        #painel .controle .pedido p b {
-          color: #007d71;
-          margin: 1.5rem 0; }
-      #painel .controle .pedido button {
-        margin: auto; }
+      vertical-align: top; }
+      .controle .pedido p b, .box .pedido p b {
+        color: #7298d7;
+        margin: 1.5rem 0; }
+    .controle .pedido button, .box .pedido button {
+      margin: auto; }
+    .controle .pedido textarea, .box .pedido textarea {
+      resize: none;
+      width: 40%;
+      margin-bottom: 2rem;
+      height: 10rem; }
 
 .visor div {
   text-align: left;
@@ -386,6 +403,18 @@ header h2 {
   .especial p {
     display: inline;
     text-align: center; }
+
+#sobre {
+  width: 100%;
+  padding-top: 5rem; }
+  #sobre .sobre {
+    width: 100%; }
+    #sobre .sobre h2 {
+      font-size: 2rem;
+      color: black;
+      font-weight: 500;
+      color: #5e8ad1;
+      border-bottom: 1px solid #86a7dc; }
 
 /*Footer styles*/
 @media only screen and (min-width: 560px) {
@@ -478,7 +507,7 @@ header h2 {
   /*Header Styles*/
   /*Main Styles*/
   #green {
-    background-color: #ceeadd; }
+    background-color: #b5c9ea; }
 
   /*Footer styles*/ }
 

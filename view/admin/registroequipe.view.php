@@ -35,6 +35,7 @@
       echo "<button class='equipo' name='queequipe' type='submit' value='$idequipe'>$nomeequipe</button>";
     }
         ?>
+              <a href='paineladm.view.php'>VOLTAR</a>
      </form>
    </div>
   </body>

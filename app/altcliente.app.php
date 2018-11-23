@@ -1,6 +1,11 @@
 <?php
  session_start();
  include "../includes/conecta.php";
+
+ if (!isset($_SESSION["id"]) || $_SESSION['tipologin'] != 'cliente'){
+   header("Location: ../");
+ }
+ 
  $id = $_POST['cliente'];
  echo "$id";
 

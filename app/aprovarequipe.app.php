@@ -17,12 +17,11 @@
      $emaile = $row['email_equipe'];
      $senhae = $row['senha_equipe'];
      $uide = $row['chave_equipe'];
+     $data_cadastro = date("Y-m-d");
  }
 
- echo " '$nomee', '$cnpje', '$integrantes', '$enderecoe', '$telefonee', '$emaile','$senha', '$uide'<br>";
-
-  $sql="INSERT INTO `nanotec`.`equipe` (`nome_da_equipe`, `cnpj_equipe`, `numero_integrantes`, `endereco_equipe`, `telefone_equipe`, `email_equipe`, `senha_equipe`, `chave_equipe`)
-  VALUES ('$nomee', '$cnpje', '$integrantese', '$enderecoe', '$telefonee', '$emaile', '$senhae', '$uide');";
+  $sql="INSERT INTO `nanotec`.`equipe` (`nome_da_equipe`, `cnpj_equipe`, `numero_integrantes`, `endereco_equipe`, `telefone_equipe`, `email_equipe`, `senha_equipe`, `chave_equipe`, `data_cadastro`)
+  VALUES ('$nomee', '$cnpje', '$integrantese', '$enderecoe', '$telefonee', '$emaile', '$senhae', '$uide', '$data_cadastro');";
 
   $result = $conn->query($sql);
 
@@ -40,8 +39,6 @@
     $sites = $row['criacao_de_sites'];
   }
 
-  echo "$uide, $banco, $redes, $analise, $desenvolvimento, $montagem, $sites";
-
 
   $sql = "INSERT INTO `nanotec`.`servico` (`chave_equipe`, `banco_de_dados`, `criacao_de_redes`, `analise_de_sistemas`, `desenvolvimento_de_sistemas`, `montagem_e_manutencao`, `criacao_de_sites`)
    VALUES ('$uide', '$banco', '$redes', '$analise', '$desenvolvimento', '$montagem', '$sites');";
@@ -54,4 +51,6 @@
 
   $sql = "DELETE FROM `nanotec`.`servicotemp` WHERE `servicotemp`.`chave_equipe` = '$uide'";
   $result = $conn -> query($sql);
+
+  header("Location: ../../view/Adm/registroequipe.view.php");
  ?>

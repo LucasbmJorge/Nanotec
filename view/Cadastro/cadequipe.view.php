@@ -14,13 +14,13 @@
       <form class="equipe" action="../../app/cadequipetemp.app.php" method="post">
         <h1>Cadastro de equipe:</h1>
       <div class="col l-8">
-        <input type="text" name="nomee" value="" placeholder="Nome da equipe" required>
-        <input type="text" name="cnpje" value="" placeholder="cnpj" required>
-        <input type="text" name="integrantese" value="" placeholder="Numero de integrantes" required>
-        <input type="text" name="enderecoe" value="" placeholder="Endereço" required>
-        <input type="text" name="telefonee" value="" placeholder="Telefone" required>
-        <input type="text" name="emaile" value="" placeholder="E-mail" required>
-        <input type="text" name="senhae" value="" placeholder="Senha" required>
+        <input type="text" name="nomee"  autocomplete="off" placeholder="Nome da equipe" required>
+        <input type="text" name="cnpje" class="cnpj" autocomplete="off" placeholder="CNPJ" required>
+        <input type="text" name="integrantese"  autocomplete="off" placeholder="Numero de integrantes" required>
+        <input type="text" name="enderecoe"  autocomplete="off" placeholder="Endereço" required>
+        <input type="text" name="telefonee" class="tel" autocomplete="off" placeholder="Telefone" required>
+        <input type="email" name="emaile"  autocomplete="off" placeholder="E-mail" required>
+        <input type="text" name="senhae"  autocomplete="off" placeholder="Senha" required>
       </div>
 
     <div class="col l-7 especial">
@@ -37,7 +37,7 @@
       </form>
     </main>
 
-<script type="text/javascript" src="JS/main.js"></script>
+<script type="text/javascript" src="../../JS/main.js"></script>
   </body>
 
   </html>

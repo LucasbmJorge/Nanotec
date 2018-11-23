@@ -13,8 +13,8 @@
     <main>
       <form class="cadastro" action="../../app/loginequipe.app.php" method="post">
         <h1>Login equipe:</h1>
-        <input type="text" name="login" value="" placeholder="Nome ou CNPJ (somente numeros)" required>
-        <input type="text" name="senha" value="" placeholder="Senha" required>
+        <input type="text" name="login" autocomplete="off" placeholder="Nome ou CNPJ (somente numeros)" required>
+        <input type="text" name="senha" autocomplete="off" placeholder="Senha" required>
         <br>
         <button type="submit" name="button">Entrar</button>
       </form>

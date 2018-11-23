@@ -2,9 +2,9 @@
 
    // Criando a Conexão com o banco
    $host = 'localhost';
-   $login = 'id7959051_andrevictor';
+   $login = 'andre';
    $senha = '';
-   $db = 'id7959051_nanotec';
+   $db = 'nanotec';
 
     $conn = new mysqli($host, $login, $senha, $db);
    // Checando a conexão com o banco
